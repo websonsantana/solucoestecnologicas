@@ -37,7 +37,28 @@
 
 
 </center>
+<form id="searchForm">
+    <input type="text" id="searchInput" placeholder="Digite sua pesquisa aqui">
+    <button type="submit">Pesquisar</button>
+</form>
 
+<div id="searchResults">
+    <!-- Os resultados da pesquisa serão exibidos aqui -->
+</div>
+
+<script>
+    document.getElementById('searchForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita que o formulário seja enviado
+        var query = document.getElementById('searchInput').value;
+        search(query);
+    });
+
+    function search(query) {
+        // Aqui você pode implementar a lógica de pesquisa, como enviar uma solicitação AJAX para um servidor
+        // Neste exemplo, apenas mostraremos a consulta de pesquisa nos resultados
+        document.getElementById('searchResults').innerHTML = "<p>Resultados da pesquisa para: " + query + "</p>";
+    }
+</script>
 
 <style>
 
