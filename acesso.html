@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Plataforma de Cursos</title>
+    <style>
+        /* Estilos CSS (mantidos do seu código original) */
+        /* ... */
+			.container {
+            max-width: 200px;
+            margin: 0 auto;
+            padding: 100px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+        }
+			.container1 {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 2px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <center>
+		
+	<img src="logo.jpg" alt="Logo" width="100">
+            <h1>Bem-vindo à MW Consultoria Financeira</h1>
+            <p>Aqui você vai aprender a controlar suas finanças e ver seu dinheiro render,
+		com os melhores Analistas financeiros do Mercado Brasileiro
+        <br>
+		<br>
+        <br>
+		<center>
+        <div class="container1">
+            <form action="login.php" method="post">
+                <label for="senha"><b>Senha de acesso:</b></label>
+				<p>
+                <input type="password" id="senha" name="senha">
+				<p>
+                <button type="submit">Login</button>
+            </form>
+			</div>
+			</center>
+			
+        </div>
+		<br>
+		<br>
+		<center>WS Solucções Tecnológicas LTDA | Todos os Diritos Reservados</center>
+		<br>
+		<br>
+    </center>
+    <!-- Adicione o campo para o administrador inserir as senhas -->
+    <script>
+        // Captura o elemento do campo de senha
+        const senhaInput = document.getElementById('senha');
+
+        // Evento de mudança no campo de senha
+        senhaInput.addEventListener('change', function () {
+            const senhaAdministrador = senhaInput.value;
+            console.log('Senha do administrador:', senhaAdministrador);
+            // Aqui você pode armazenar a senha em algum lugar seguro (por exemplo, banco de dados) ou tomar outras ações necessárias.
+        });
+    </script>
+</body>
+</html>
