@@ -1,162 +1,210 @@
 
 <!DOCTYPE html>
-<html>
-<head>
-<style>
-body 
-{  background-color: #000000; }
-</style>
-<center>
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhlt88EoD9HTijHrgUhc0_J4EwKSDvv8TK2EjAh_YSjY98YERVJWm4Rhd-xzCG56JMq3_0oHwSRQ24KWGpanBj1XO_uEyfuI7oRnSANai7f8CMGI2tLZkBqnnvLcY0iF4BvnAe3w6S_3b7qyEdLcs-3idmyDOKX16qTjavBM1SpZ3OHDpLs9RCcU2gxQ_U/s1600/logofundo%20branco.jpg" 
-alt="logo" border="10">
+<html lang="pt-br">
+<header>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre nós</title>
-	<a href="https://api.whatsapp.com/send?phone=+5581981521109" target="_blank" class="social-btn whatsapp-btn">
-    <img src="https://i.pinimg.com/originals/4c/57/88/4c578884a35ad43f232bb8dc56bd1d95.png">   
-<a href="https://www.instagram.com/wssolucoestecnologicas/" target="_blank" class="social-btn instagram-btn">
-    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEibBoUvLrDdXxXDTIvp98YIAeykHZXeGUmlbJYYke2Ig9c3qX_SMKdLtBi7zSRWtuR5Uqx3vYaqlyWRm30BcG8yQRBwG-twTe3dugxrUGHDDecpg9LBxo1OodNqFPafCfbb8IYNM1KTB9lxJalHjI6O4OUkPqXaYj0MMCWPt4VPjIWIUzG1upo9WEldhQ2R/s16000/Instagram_Icone_3D_Elemento_Para_Composicao_PNG_Transparente%20(1).png">
-    
-	</head>
-<body>
-
-<nav>
-    <a href="index.html" > Página Inicial</a>
-    <a href="QUEMSOMOSNOS.HTML"class="yellow-text">Sobre Nós</a>
-    <a href="SERVICOS.HTML">Serviços</a>
-    <a href="CONTATO.HTML">Contato</a>
-    <a href="PROJETOS.HTML">Projetos</a>
-    <a href="#"> <input type="text" placeholder="Pesquisar...">
-    <button type="submit">Buscar</button>
-    </a>
-	
-</nav>
-<p></p>
-</body>
-</html>
-
-
-</center>
-<center>
-
-
-</head>
-<body>
-<script type="text/javascript">
- </script>
-</body>
-<style>
-        .yellow-text {
+    <title>Sobre</title>
+<button onclick="toggleMenu()">
+	<a class="yellow-text">☰</button></a>
+	 
+</header>
+    <style>
+	    .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 1px;
+            background-color: #ffffff;
+            box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+			text-align: left;
+			border-radius: 2px;
+        }
+       		
+	    .yellow-text {
             color: #ffcc66;
+	    }
+	    .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 10px;
+            background-color: #ffffff;
+            box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.5);
+	    text-align: left;
+	    border-radius: 20px;
+			
         }
         body {
-            background-color: #fff;
-            color: white; /* Adicionado para definir a cor do texto como branco */
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif; 
+            margin: 50;
+            padding: 50;
+            background-color: #f0f0f0;
+            color: #fffwe;
         }
-
         header {
-		    background-color: #ffffff;
-            text-align: left;
-			margin: 30px;
-            padding: 30px;
-            color: #000;
-	    width: 910px;
-			
-						
-        }
-
-
-	 {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        nav {
             background-color: #333;
             color: white;
             padding: 10px;
-            text-align: center;
-	    fixed: 10px
+            text-align: left;
         }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            margin: 5px;
-            display: inline-block;
-        }
-
-        nav a:hover {
-            background-color: #555;
-			
-		
-               .caption {
-            text-align: center;
-            color: #fff;
-            padding: 8px 12px;
-            position: absolute;
-            bottom: 8px;
-            width: 100%;
-            font-size: 15px;
-            background: rgba(0, 0, 0, 0.5);
-			
-    </style>
-       
-	
-<script>
-    
-</script>
-</body>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-       
-		}
-
-        footer {
+        nav {
             background-color: #333;
             color: white;
-            padding: 0px;
-            text-align: center;
+            width: 200px;
+            height: 100%;
             position: fixed;
-            bottom: 0;
-            width: 100%;
+			text-align: right;
+            top: 0;
+            left: -200px;
+            transition: left 0.5s ease;
+            padding-top: 7px;
+            z-index: 100;
+        }	
+        nav.open {
+            left: 0;
+        }
+         nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 5px;
+            border-bottom: 1px solid #555;
+            text-align: left;
+        }
+        nav img {
+            display: block;
+            margin: 0 auto;
+            padding: 0px 0;
+        }
+        section {
+            padding: 40px;
+            margin-left: 800 px;
+            text-align: left;
+		}
+        footer {
+            background-color:  #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        button {
+            background-color: #444; /* Verde grama */
+            color: white; /* Cor do texto branca */
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            margin: 6px 3px;
+            cursor: pointer;
+            border-radius: 60px;
+			
+        }
+
+        button:hover {
+            background-color: #000; /* Um tom mais escuro quando o botão é passado o mouse */
+        }
+        @media screen and (max-width: px) {
+            nav {
+                left: -200px;
+            }
+            
+            nav.open {
+                left: -200px;
+            }
+            
         }
 		
-		header {
-		    font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+		a {
+                text-decoration: none; /* remove o sublinhado */
+                color: black; /* define a cor do texto como preto */
+          }
+		
+        .symbols {
+            position: absolute;
+            top: 10;
+            right: 10;
+        }
+        .title {
+            position: absolute;
+            bottom: 22;
+            width: 100%;
+            text-align: center;
+        }
+		
+		.box {
+            width: 100%;
+            padding: 0px;
+            box-sizing: border-box;
+			border: 2px 
+			solid black;
+            position: relative;
 			
+       }
+	    .box1 {
+            margin: 5px;
+		    width:100%;
+            height: 70px;
+		    border: 3px 
+		    solid black;
+			border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+			transition: transform 0.3s ease;
+			box-sizing: border-box;
+			}
 			
-		img {
-            border-radius: 50%; /* Adiciona bordas arredondadas */
-            width: 90px; /* Ajusta o tamanho da imagem conforme necessário */
-            height: 90px;
-			float: left; /* Para alinhar a imagem à esquerda do texto */
-            margin-right: 20px; /* Espaço à direita da imagem */
-    }
-	
-	
+			.box1:hover {
+            transform: scale(0.85);
+        }
+		.box1 img {
+            margin-right: 10px;
+        }
+		@media screen and (max-width: 768px) {
+            nav {
+                left: -200px;
+            }
+
+            nav.open {
+                left: 0;
+            }
+
+            
+        button.menu-btn:hover {
+            color: #ccc;
+        }
     </style>
+    <body>
+    <center>
 	
-	<header>
-      
-<p>
-</p>
-</p>
-<br>
-<CENTER><H2>Quem somos nós</H2></CENTER>
-<br>
-<br>
+	<h2>Sobre</h2>
+	</center>  
+           
+    
+        <nav id="sideNav" onclick="closeMenu()">
+		
+			<button onclick="toggleMenu()">
+	<a class="yellow-text"><B>X</B></button></a>
+		<br>
+		<br>
+		<br>
+		<br>
+        <img src="logo.png" alt="Logo" width="150">
+        <br>
+        <br>
+		
+    <a href="index.html" class="yellow-text"> Página Inicial</a>
+    <a href="QUEMSOMOSNOS.HTML">Sobre Nós</a>
+    <a href="SERVICOS.HTML">Serviços</a>
+    <a href="CONTATO.HTML">Contato</a>
+    <a href="PROJETOS.HTML">Projetos</a>
+		<br>
+		<br>
+		<br>
+	  <a class="yellow-text"><center><h4>Transformando e Inovando</h4> </center>  </a>
+        </nav>
+    <section>
+
 <p>
 <H3>WS Soluções Tecnológicas:</H3>
 <P>
@@ -164,95 +212,97 @@ A WS é uma empresa inovadora dedicada à vanguarda da automação de acesso de 
 Com uma visão comprometida com a segurança, eficiência e comodidade, estamos transformando a experiência de controle de acesso para condomínios,
 empresas e residências.
 <br>
+<div class="container">
+<center><H3>Nosso Foco</H3></center>
 <br>
-<br>
-<br>
-<br>
-<img src="https://th.bing.com/th/id/OIG4.R5ddeJ6vR5hJZbB3eH6B?w=1024&h=1024&rs=1&pid=ImgDetMain" alt="Nosso Foco:">
-<P>
-<H3>Nosso Foco</H3>
-<P>
 Automatização de Acesso com RFID Na WS SOLUÇÕES TECNOLÓGICAS, nossa especialização reside na implementação de sistemas avançados 
 de controle de acesso baseados em RFID. Utilizando a tecnologia de identificação por radiofrequência, proporcionamos soluções 
 personalizadas para otimizar a segurança e a gestão de entrada em portarias. Seja para condomínios residenciais, 
 corporativos ou industriais, nossa abordagem se destaca pela simplicidade, confiabilidade e eficácia.
+
+</div>
 <br>
+<div class="container">
+<center><H3>Compromisso com a Inovação</H3></center
 <br>
-<br>
-<br>
-<br>
-<img src="https://th.bing.com/th/id/OIG4.mimtjpTYfd9ytux6zOrg?w=1024&h=1024&rs=1&pid=ImgDetMain" alt="Controle de Acesso">
-<p>
-<H3>Compromisso com a Inovação</H3>
-<P>
 Estamos na vanguarda da revolução tecnológica, dedicando-nos a incorporar as últimas tendências em automação de acesso em nossas soluções. 
 Ao alavancar o poder do RFID, oferecemos não apenas um método seguro de entrada,mas também uma maneira eficiente e moderna de gerenciar 
 o fluxo de pessoas.
+</div>
 <br>
+<div class="container">
+<center><H3>Nossa Missão</H3></center>
 <br>
-<br>
-<br>
-<br>
-<img src="https://th.bing.com/th/id/OIG1.LtR_3HFPM23gFtjmK2bX?pid=ImgGn" alt="Nossa Missão">
-<p>
-<H3>Nossa Missão</H3>
-<P>
 Na WS SOLUÇÕES TECNOLÓGICAS, nossa missão é criar um ambiente mais seguro e eficiente, simplificando a gestão de acesso por meio de soluções inovadoras. 
 Buscamos constantemente superar as expectativas, proporcionando tranquilidade aos nossos clientes por meio de sistemas avançados,
 confiáveis e intuitivos.
+</div>
 <br>
 <br>
 <br>
 <br>
 <br>
 <p>
+<div class="container">
 <center><H3>Por Que Escolher a WS SOLUÇÕES TECNOLÓGICAS?</H3></center>
-<P>
+<br>
+<br>
 <b>Experiência Especializada:</b> Contamos com uma equipe de profissionais altamente capacitados e experientes em soluções tecnológicas de acesso.<p>
 <b>Compromisso com a Segurança:</b> Priorizamos a segurança como a pedra angular de nossos serviços, garantindo a proteção total dos ambientes sob nossa supervisão.
 <b><p>Inovação Contínua:</b> Mantemo-nos atualizados com as últimas inovações em automação de acesso para oferecer soluções que atendam às crescentes demandas do mercado.
-<p>
+<br>
+<br>
 <center><b>Junte-se a nós na WS SOLUÇÕES TECNOLÓGICAS, onde a tecnologia encontra a segurança para criar um futuro mais inteligente e protegido.</center>
+</div>
 <p>
 <br>
 <br>
 <br>
 <br>
 <p>
-</header>
-</head>
-<footer>
-    <p>&copy; 2024 WS Soluções Tecnológicas. Todos os direitos reservados.</p>
-</footer>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Botões do WhatsApp e Instagram</title>
-    <style>
-        /* Adicione estilos conforme necessário */
-        .social-btn {
-            display: inline-block;
-            text-decoration: none;
-            padding: 0px;
-            border-radius: 5px;
-            margin: 5px;
+  
+    </section>
+    <footer>
+        <p><h5>&copy; <a class="yellow-text">2024 WS Solucoes Tecnológias. Todos os Direitos Reservados.</h5></p></a>
+    </footer>
+	    <br>
+	    
+   
+	    
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById('sideNav');
+            nav.classList.toggle('open');
         }
-        .social-btn img {
-            width: 90px;
-            height: 90px;
-                    }
+
+        function closeMenu() {
+            var nav = document.getElementById('sideNav');
+            if (nav.classList.contains('open')) {
+                nav.classList.remove('open');
+            }
+        }
+        function exibirSaldo() {
+                document.getElementById("saldo-em-caixa").style.display = "block";
+                // Aqui você pode adicionar lógica para buscar e exibir o saldo real em vez de um valor fixo
+            }
+
+        function fecharSaldo() {
+                document.getElementById("saldo-em-caixa").style.display = "none";
+            }
+    </script>
+	 <style>
+        /* Estilos para a caixa flutuante */
+        #saldo-em-caixa {
+            display: none; /* Inicialmente escondido */
+            position: fixed;
+            bottom: 500px;
+            right: 200px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 9999;
+        }
     </style>
-</head>
-<body>
-
-
-
-
-</a>
-
 </body>
 </html>
-
