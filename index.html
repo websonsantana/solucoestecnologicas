@@ -1,198 +1,146 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-<center>
-<br>
-<img src="logofundobranco.jpg" 
-
-    alt="logo" border="0">
     <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	
-    <title>WS Soluções Tecnológicas</title>
-	</head>
-<body>
-
-<nav>
-    <a href="index.html" class="yellow-text"> Página Inicial</a>
-    <a href="QUEMSOMOSNOS.HTML">Sobre Nós</a>
-    <a href="SERVICOS.HTML">Serviços</a>
-    <a href="CONTATO.HTML">Contato</a>
-    <a href="PROJETOS.HTML">Projetos</a>
-    <a href=""> <input type="text" placeholder="Pesquisar...">
-    <button type="submit">Buscar</button>
-    </a>	
-</nav>
-<p></p>
-</body>
-</html>
-
-
-</center>
-
-
-<style>
-
-        {  background-color: #fff; }
-
-           .yellow-text {
-            color: #ffcc66;
-        }
-
-
-	    {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        nav {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-			text-decoration: none;
-            padding: 10px 20px;
-            margin: 5px;
-            display: inline-block;
-        }
-
-        nav a:hover {
-            background-color: #555;
-						
-		}	
-        
-        .slideshow-container {
-            max-width: 926px;
-            position: relative;
-            margin: auto;
-        }
-
-        .mySlides {
-            display: none;
-        }
-
-        .prev {
-            position: absolute;
-            top: 50%;
-            width: auto;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 20px;
-            transition: 0.6s ease;
-            border-radius: 100 30px 30px 0;
-            cursor: pointer;
-        }
-		  .next {
-            position: absolute;
-            top: 50%;
-            width: auto;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 20px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            cursor: pointer;
-        }
-
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-
-        .prev:hover, .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        .caption {
-            text-align: center;
-            color: #fff;
-            padding: 8px 12px;
-            position: absolute;
-            bottom: 8px;
-            width: 100%;
-            font-size: 15px;
-            background: rgba(0, 0, 0, 0.5);
-        }
-		
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>WS Soluções Tecnológicas</title>
+    <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-       
-		}
+            background-color: #f0f0f0;
+            color: #000; /* Cor do texto */
+        }
+
+        header {
+            background-color: #444;
+            color: white;
+            padding: 1px;
+            text-align: left;
+            position: relative;
+        }
+
+        #menuToggle {
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 1px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            margin: 1px 85%;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+
+        nav {
+            background-color: #444;
+            color: white;
+            width: 200px;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: -200px;
+            transition: left 0.5s ease;
+            padding-top: 60px;
+            z-index: 0;
+			
+        }
+
+        nav.open {
+            left: 0;
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 5px;
+            border-bottom: 1px solid #444;
+            text-align: left;
+			
+        }
+
+        nav img {
+            display: block;
+            margin: 0 auto;
+            padding: 0px 0;
+        }
+
+        section {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .box {
+            width: 125px;
+            padding: 20px;
+            margin: 10px;
+            background-color: #444;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			opacity: 0,1
+			transition: opacity 0.3s ease;
+        }
+
+        .box .icon {
+            margin-bottom: 10px;
+        }
 
         footer {
-            background-color: #333;
+            background-color: #444;
             color: white;
-            padding: 0px;
+            padding: 20px;
             text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
         }
-		
-        .social-btn {
-            display: inline-block;
-            text-decoration: none;
-            padding: 0px;
-            border-radius: 5px;
-            margin: 5px;
-        }
-        .social-btn img {
-            width: 80px;
-            height: 80px;
-        }
-       
+
     </style>
-		
-
-    </div>
+</head>
+<body>
+<header>
+<button id="menuToggle" onclick="toggleMenu()"><h4>☰</h4></button>
 <center>
-    <a class="prev" onclick="plusSlides(-1)">❮</a>
-    <a class="next" onclick="plusSlides(1)"> ❯</a>
-	
-</div>
-<p>
+<img src="23.png" alt="Logo" width="40%">
+<h2><b></h2>
+</center>
+</header>
+
 <br>
-<br>
+<nav id="sideNav" onclick="closeMenu()">  
+    <img src="logo.png" alt="Logo" width="150">
+    <br>
+	<br>
+    <a href="index.html" class="yellow-text"> Início</a>
+    <a href="quemsomosnos.html">Sobre</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="contato.html">Contato</a>
+	<a href="projetos.html">Projetos</a>
+</nav>
+<section>
+</section>
+<footer>
+<p><h6>&copy; WS Solucoes Tecnologicas | Todos os Direitos Reservados.</h6></p>
+</footer>
 <script>
+    function toggleMenu() {
+        var nav = document.getElementById('sideNav');
+		var menuToggle = document.getElementById('menuToggle');
+        
+       if (nav.classList.contains('open')) {
+            nav.classList.remove('open');
+            menuToggle.textContent = "☰";
+        }else {
+            nav.classList.add('open');
+            menuToggle.textContent = "X";
+        }
+		}
 
-  var slideIndex = 0;
-  showSlides();
-
-  function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {
-      slideIndex = 1;
-    }
-    slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 3000); // Altere o valor 2000 para o intervalo desejado em milissegundos (2 segundos no exemplo)
-  }
-
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
 </script>
 </body>
-</head>
-<footer>
-<p>&copy; 2024 WS Soluções Tecnológicas. Todos os direitos reservados.</p>
-</footer>
-</head>
 </html>
-
