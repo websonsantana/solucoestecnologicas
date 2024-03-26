@@ -1,43 +1,43 @@
 
+
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+<header>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>WS Soluções Tecnológicas</title>
+    <title>Sobre</title>
+	<button onclick="toggleMenu()">☰</button>
+	 
+</header>
     <style>
+	    .yellow-text {
+            color: #ffcc66;
+	    }
+	    .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 10px;
+            background-color: #ffffff;
+            box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.5);
+	    text-align: left;
+	    border-radius: 20px;
+			
+        }
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif; 
+            margin: 50;
+            padding: 50;
             background-color: #f0f0f0;
-            color: #000; /* Cor do texto */
+            color: #fffwe;
         }
-
         header {
-            background-color: #444;
+            background-color: #333;
             color: white;
-            padding: 1px;
+            padding: 10px;
             text-align: left;
-            position: relative;
         }
-
-        #menuToggle {
-            background-color: #555;
-            color: white;
-            border: none;
-            padding: 1px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 12px;
-            margin: 1px 85%;
-            cursor: pointer;
-            border-radius: 20px;
-        }
-
         nav {
-            background-color: #444;
+            background-color: #333;
             color: white;
             width: 200px;
             height: 100%;
@@ -46,98 +46,205 @@
             left: -200px;
             transition: left 0.5s ease;
             padding-top: 60px;
-            z-index: 0;
-			
-        }
-
+            z-index: 100;
+        }	
         nav.open {
             left: 0;
         }
-
-        nav a {
+         nav a {
             display: block;
             color: white;
             text-decoration: none;
             padding: 5px;
-            border-bottom: 1px solid #444;
+            border-bottom: 1px solid #555;
             text-align: left;
-			
         }
-
         nav img {
             display: block;
             margin: 0 auto;
             padding: 0px 0;
         }
-
         section {
-            padding: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .box {
-            width: 125px;
-            padding: 20px;
-            margin: 10px;
-            background-color: #444;
-            text-align: center;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-			opacity: 0,1
-			transition: opacity 0.3s ease;
-        }
-
-        .box .icon {
-            margin-bottom: 10px;
-        }
-
+            padding: 40px;
+            margin-left: 800 px;
+            text-align: left;
+		}
         footer {
-            background-color: #444;
+            background-color:  #333;
             color: white;
             padding: 20px;
             text-align: center;
         }
-
-    </style>
-</head>
-<body>
-<header>
-<button id="menuToggle" onclick="toggleMenu()"><h4>☰</h4></button>
-
-</header>
-
-<br>
-<nav id="sideNav" onclick="closeMenu()">  
-    <img src="logo.png" alt="Logo" width="150">
-    <br>
-	<br>
-    <a href="index.html" class="yellow-text"> Início</a>
-    <a href="quemsomosnos.html">Sobre</a>
-    <a href="servicos.html">Serviços</a>
-    <a href="contato.html">Contato</a>
-	<a href="projetos.html">Projetos</a>
-</nav>
-<section>
-</section>
-<footer>
-<p><h6>&copy; WS Solucoes Tecnologicas | Todos os Direitos Reservados.</h6></p>
-</footer>
-<script>
-    function toggleMenu() {
-        var nav = document.getElementById('sideNav');
-		var menuToggle = document.getElementById('menuToggle');
-        
-       if (nav.classList.contains('open')) {
-            nav.classList.remove('open');
-            menuToggle.textContent = "☰";
-        }else {
-            nav.classList.add('open');
-            menuToggle.textContent = "X";
+        button {
+            background-color: #444; /* Verde grama */
+            color: white; /* Cor do texto branca */
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            margin: 6px 3px;
+            cursor: pointer;
+            border-radius: 60px;
+			
         }
-		}
 
-</script>
+        button:hover {
+            background-color: #000; /* Um tom mais escuro quando o botão é passado o mouse */
+        }
+        @media screen and (max-width: px) {
+            nav {
+                left: -200px;
+            }
+            
+            nav.open {
+                left: -200px;
+            }
+            
+        }
+		
+		a {
+                text-decoration: none; /* remove o sublinhado */
+                color: black; /* define a cor do texto como preto */
+          }
+		
+        .symbols {
+            position: absolute;
+            top: 10;
+            right: 10;
+        }
+        .title {
+            position: absolute;
+            bottom: 22;
+            width: 100%;
+            text-align: center;
+        }
+		
+		.box {
+            width: 100%;
+            padding: 0px;
+            box-sizing: border-box;
+			border: 2px 
+			solid black;
+            position: relative;
+			
+       }
+	    .box1 {
+            margin: 5px;
+		    width:100%;
+            height: 70px;
+		    border: 3px 
+		    solid black;
+			border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+			transition: transform 0.3s ease;
+			box-sizing: border-box;
+			}
+			
+			.box1:hover {
+            transform: scale(0.85);
+        }
+		.box1 img {
+            margin-right: 10px;
+        }
+		@media screen and (max-width: 768px) {
+            nav {
+                left: -200px;
+            }
+
+            nav.open {
+                left: 0;
+            }
+
+            
+        button.menu-btn:hover {
+            color: #ccc;
+        }
+    </style>
+    <body>
+    <center>
+			<br>
+			
+           
+			
+    </center>
+           
+    
+        <nav id="sideNav" onclick="closeMenu()">
+		<br>
+		<br>
+		<br>
+		<br>
+        <img src="brasao.png" alt="Logo" width="50">
+        <center>Pelada Futebol Club</center>
+		<br>
+        <br>
+		
+    <a href="index.html" > Página Inicial</a>
+    <a href="QUEMSOMOSNOS.HTML"class="yellow-text">Sobre Nós</a>
+    <a href="SERVICOS.HTML">Serviços</a>
+    <a href="CONTATO.HTML">Contato</a>
+    <a href="PROJETOS.HTML">Projetos</a>
+		<br>
+		<br>
+		<br>
+	    <center><img src="logo.png" alt="Logo" width="150"></center>  
+        </nav>
+    <section>
+	<center><h2><b>Sobre</b></h2></center>
+	<div class="container">   
+		<center><img src="logo.png" alt="Logo" width="150"></center>
+		<br>
+	<center>
+		Transformando e inovando
+	</center>
+            
+    </section>
+    <footer>
+        <p><h5>&copy; 2024 WS Solucoes Tecnológias. Todos os Direitos Reservados.</h5></p>
+    </footer>
+	    <br>
+	    
+    <center>
+        <img src="logo.png" alt="Logo" width="200" >
+    </center>
+	    
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById('sideNav');
+            nav.classList.toggle('open');
+        }
+
+        function closeMenu() {
+            var nav = document.getElementById('sideNav');
+            if (nav.classList.contains('open')) {
+                nav.classList.remove('open');
+            }
+        }
+        function exibirSaldo() {
+                document.getElementById("saldo-em-caixa").style.display = "block";
+                // Aqui você pode adicionar lógica para buscar e exibir o saldo real em vez de um valor fixo
+            }
+
+        function fecharSaldo() {
+                document.getElementById("saldo-em-caixa").style.display = "none";
+            }
+    </script>
+	 <style>
+        /* Estilos para a caixa flutuante */
+        #saldo-em-caixa {
+            display: none; /* Inicialmente escondido */
+            position: fixed;
+            bottom: 500px;
+            right: 200px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 9999;
+        }
+    </style>
 </body>
 </html>
