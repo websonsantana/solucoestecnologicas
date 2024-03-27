@@ -11,12 +11,11 @@
     <title>Serviços | WS Soluções Tecnológicas</title>
 	
 	
-	
-<button onclick="toggleMenu()">
-	<a class="yellow-text"><h3>☰</h3></button></a>
-	<center>
-	<a href="index.html"><img src="titulo.png" alt="Logo" width="50%"></a>
-	</center>
+	<div class="menu-container">
+  <button onclick="toggleMenu()"><a class="yellow-text"><h3>☰</h3></button></a>
+  <center><img src="titulo.png" width="50%"></center>
+</div>
+
 	</header>
 	<br>
 	<div class="container1">
@@ -25,6 +24,19 @@
 
 
 <style>
+
+  .menu-container {
+            display: flex;
+            align-items: center; /* Alinhar itens verticalmente */
+  }
+        .menu-button {
+            background-color: #007bff; /* Cor de fundo do botão */
+            color: #fff; /* Cor do texto do botão */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-right: 20px; /* Espaçamento à direita do botão */
+  }
 
             .imagem-destaque {
             float: left; /* Para alinhar a imagem à esquerda do texto */
