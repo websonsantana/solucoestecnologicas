@@ -10,7 +10,8 @@
     <meta property="og:image" content="https://images.app.goo.gl/f7QsPDCRovHP8cCR7">
     <title>Início | WS Soluções Tecnológicas</title>
 	
- <div class="menu-container">
+	
+  <div class="menu-container">
   <button onclick="toggleMenu()"><a class="yellow-text"><h3>☰</h3></button></a>
   <center><img src="titulo.png" width="50%"></center>
 </div>
@@ -31,18 +32,27 @@
             border-radius: 5px;
             margin-right: 20px; /* Espaçamento à direita do botão */
   }
-	
+		   
 		    .yellow-text {
-            color: #ffcc66;
-	    }
+             color: #ffcc66;
+			
+		.container3 {
+		     padding: 40px;
+             margin-left: 800 px;
+             text-align: left;
+                   }
+        .titulo {
+              margin: left
+                }
+	            }
 	    .container1 {
             max-width: 90%;
             margin: 0 auto;
             padding: px;
             background-color: #666;
             box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.5);
-	    text-align: left;
-	    border-radius: 10px;
+	        text-align: left;
+	        border-radius: 10px;
 			
         }
 	    .container {
@@ -66,7 +76,7 @@
             background-color: #444;
             color: white;
             padding: 10px;
-            text-align: left;
+            text-align: centert;
         }
         nav {
             background-color: #444;
@@ -112,14 +122,16 @@
             background-color: #444; /* Verde grama */
             color: white; /* Cor do texto branca */
             border: none;
-            padding: 10px 20px;
+            padding: 6px 10px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
             font-size: 12px;
             margin: 6px 3px;
             cursor: pointer;
-            border-radius: 60px;
+            border-radius: 20px;
+			
+			
 			
         }
 
@@ -195,6 +207,118 @@
         button.menu-btn:hover {
             color: #ccc;
         }
+		.slideshow-container {
+            max-width: 500px;
+            position: relative;
+            margin: auto;
+        }
+
+        .slide {
+            position: relative;
+            text-align: center;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .slide-description {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .slide:hover .slide-description {
+            opacity: 1;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            z-index: 0;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+    </style>
+	<style>
+        .slideshow-container {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+        .slide {
+            position: relative;
+            text-align: center;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+			border-radius: 10px;
+        }
+
+        .slide-description {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+			border-radius: 10px;
+        }
+
+        .slide:hover .slide-description {
+            opacity: 1;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            z-index: 1000;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
     </style>
 	
     <body>
@@ -222,10 +346,30 @@
 		<br>
 	  <a class="yellow-text"><center><h4>Transformando e Inovando</h4> </center>  </a>
         </nav>
+		
+		
     <section>
-	    <br>
-<a href="index.html"><img src="logonovo.png" alt="Logo" width="100%"></a>
-	    <br>
+	
+	
+	  <div class="slideshow-container">
+	 <div class="slide">
+        <a href="pagina1.html">
+            <img src="instagold.png" alt="Slide 1">
+            <div class="slide-description">Descrição do Slide 1</div>
+        </a>
+    </div>
+	 <div class="slide">
+        <a href="pagina1.html">
+            <img src="whatgold.png" alt="Slide 2">
+            <div class="slide-description">Descrição do Slide 1</div>
+        </a>
+    </div>
+	 
+    <button class="prev" onclick="changeSlide(-1)"><</button>
+    <button class="next" onclick="changeSlide(1)">></button>
+</div>
+
+
     </section>
 	     <br>
     <footer>
@@ -247,7 +391,39 @@
                 nav.classList.remove('open');
             }
         }
-        
+        var slideIndex = 1;
+    showSlide(slideIndex);
+    var slideInterval = setInterval(autoSlide, 4000); // Intervalo de 3 segundos
+
+    function autoSlide() {
+        slideIndex++;
+        showSlide(slideIndex);
+    }
+
+    function changeSlide(n) {
+        clearInterval(slideInterval); // Limpa o intervalo atual
+        slideIndex += n;
+        showSlide(slideIndex);
+        slideInterval = setInterval(autoSlide, 4000); // Inicia um novo intervalo
+    }
+
+    function showSlide(n) {
+        var slides = document.getElementsByClassName("slide");
+
+        if (n > slides.length) {
+            slideIndex = 1;
+        }
+
+        if (n < 1) {
+            slideIndex = slides.length;
+        }
+
+        for (var i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+    }
     </script>
 	
 </body>
