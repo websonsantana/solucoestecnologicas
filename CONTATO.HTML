@@ -16,12 +16,41 @@
 </div>
 	</header>
 	<br>
-	<div class="container1">
+	<hr>
 <a class="yellow-text"><center><h2>Contato</h2></center></a>
-</div>
+<hr>
 
 
 <style>
+
+  .menu-container {
+            display: flex;
+            align-items: center; /* Alinhar itens verticalmente */
+  }
+        .menu-button {
+            background-color: #007bff; /* Cor de fundo do botão */
+            color: #fff; /* Cor do texto do botão */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-right: 20px; /* Espaçamento à direita do botão */
+  }
+
+            .imagem-destaque {
+            float: left; /* Para alinhar a imagem à esquerda do texto */
+            margin-right: 25px; /* Espaço à direita da imagem */
+    }
+    </style>
+	<style>
+	
+	       		
+	    hr {
+        border: none; /* Remove a borda padrão */
+        height: 1px; /* Define a altura da linha */
+        background-color: #b39240; /* Define a cor da linha, neste caso vermelho */
+		
+		
+}
 
   .menu-container {
             display: flex;
@@ -51,7 +80,7 @@
             max-width: 100%;
             margin: 0 auto;
             padding: px;
-            background-color: #666;
+            background-color: #444;
             box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.5);
 	    text-align: left;
 	    border-radius: 10px;
@@ -61,17 +90,7 @@
             max-width: 100%;
             margin: 0 auto;
             padding: 10px;
-            background-color: #fff;
-            box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.5);
-	    text-align: center;
-	    border-radius: 20px;
-			
-        }
-		 .container2 {
-            max-width: 90%;
-            margin: 0 auto;
-            padding: 8px;
-            background-color: #fff;
+            background-color: #444;
             box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.5);
 	    text-align: left;
 	    border-radius: 20px;
@@ -81,8 +100,9 @@
             font-family: Arial, sans-serif; 
             margin: 50;
             padding: 50;
-            background-color: #f0f0f0;
-            color: #fffwe;
+            background-color: #444;
+            color: #fff;
+			
         }
         header {
             background-color: #444;
@@ -246,34 +266,37 @@
         </nav>
     <section>
 	<br>
-	<div class ="container"
+	<div class ="container">
  <center>
      
      <main>
 <center>
         <h3>Para entrar em contato com a WS Soluções Tecnológicas utilize umas das opções abaixo:</h3>
-        <strong>E-mail:</strong> ws.solucoes.tecnlogia@gmail.com
+        <strong><a class="yellow-text">E-mail:</a></strong> ws.solucoes.tecnlogia@gmail.com
 <p>
-        <strong>Whatsapp:</strong> (81) 981521109 
+        <strong><a class="yellow-text">Whatsapp:</a></strong> (81) 981521109 
 <p>
         ou se preferir preencha o formulario abaixo e entraremos em contato</h3>
 </center>
 <center>
 </main>
-<div class ="container2">
-    <center><h2>Envie uma mensagem </h2></center>
+<div class ="container">
+    <center><h2><a class="yellow-text">Envie uma mensagem</a> </h2></center>
 	    <form id="whatsappForm">
-        <label for="nome">Nome Completo:</label><br>
+        <label for="nome"><a class="yellow-text">Nome Completo:</a></label><br>
         <input type="text" id="nome" name="nome" required><br><br>
-        <label for="email">E-mail:</label><br>
+        <label for="email"><a class="yellow-text">E-mail:</a></label><br>
         <input type="email" id="email" name="email"><br><br>
-        <label for="mensagem">Mensagem:</label><br>
+        <label for="mensagem"><a class="yellow-text">Mensagem:</a></label><br>
         <textarea id="mensagem" rows="4" cols="40"></textarea><br><br>
         <input type="submit" value="Enviar">
     </form>
+	</div>
+	</div>
+	</center>
 <br>
-</center>
-</div>
+
+
 </div>
 <br>
     <script>
