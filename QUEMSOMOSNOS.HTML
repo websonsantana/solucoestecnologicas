@@ -17,10 +17,16 @@
 
 	</header>
 	<br>
-	<div class="container1">
+	<hr>
 <a class="yellow-text"><center><h2>Sobre</h2></center></a>
+<hr>
 </div>
     <style>
+	
+        .text-color {
+            color:#fff;
+			}
+		
 	    .menu-container {
             display: flex;
             align-items: center; /* Alinhar itens verticalmente */
@@ -32,23 +38,32 @@
             padding: 10px 20px;
             border-radius: 5px;
             margin-right: 20px; /* Espaçamento à direita do botão */
-  }    
-       		
-	    .yellow-text {
-            color: #ffcc66;
-	    }
-		.container1 {
-            max-width: 100%;
+  }
+		   
+		    .yellow-text {
+             color: #ffcc66;
+			
+		.container3 {
+		     padding: 40px;
+             margin-left: 800 px;
+             text-align: left;
+                   }
+        .titulo {
+              margin: left
+                }
+	            }
+	    .container1 {
+            max-width: 90%;
             margin: 0 auto;
             padding: px;
             background-color: #666;
             box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.5);
-	    text-align: left;
-	    border-radius: 10px;
+	        text-align: left;
+	        border-radius: 10px;
 			
         }
 	    .container {
-            max-width: 100%;
+            max-width: 90%;
             margin: 0 auto;
             padding: 10px;
             background-color: #fff;
@@ -61,25 +76,25 @@
             font-family: Arial, sans-serif; 
             margin: 50;
             padding: 50;
-            background-color: #f0f0f0;
+            background-color: #444;
             color: #fffwe;
         }
         header {
             background-color: #444;
             color: white;
             padding: 10px;
-            text-align: left;
+            text-align: centert;
         }
         nav {
             background-color: #444;
             color: white;
             width: 200px;
-            height: 100%;
+            height: 90%;
             position: fixed;
 			text-align: right;
             top: 0;
             left: -200px;
-            transition: left 0.5s ease;
+            transition: left 0.1s ease;
             padding-top: 7px;
             z-index: 100;
         }	
@@ -100,28 +115,30 @@
             padding: 0px 0;
         }
         section {
-            padding: 0px;
+            padding: 40px;
             margin-left: 800 px;
             text-align: left;
 		}
         footer {
             background-color:  #444;
             color: white;
-            padding: 20px;
+            padding: 10px;
             text-align: center;
         }
         button {
-            background-color: #444; /* Verde grama */
-            color: white; /* Cor do texto branca */
+            background-color: #444; 
+            color: white; 
             border: none;
-            padding: 10px 20px;
+            padding: 6px 10px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
             font-size: 12px;
             margin: 6px 3px;
             cursor: pointer;
-            border-radius: 60px;
+            border-radius: 20px;
+			
+			
 			
         }
 
@@ -157,7 +174,7 @@
         }
 		
 		.box {
-            width: 100%;
+            width: 90%;
             padding: 0px;
             box-sizing: border-box;
 			border: 2px 
@@ -167,7 +184,7 @@
        }
 	    .box1 {
             margin: 5px;
-		    width:100%;
+		    width:90%;
             height: 70px;
 		    border: 3px 
 		    solid black;
@@ -197,6 +214,118 @@
         button.menu-btn:hover {
             color: #ccc;
         }
+		.slideshow-container {
+            max-width: 500px;
+            position: relative;
+            margin: auto;
+        }
+
+        .slide {
+            position: relative;
+            text-align: center;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .slide-description {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .slide:hover .slide-description {
+            opacity: 1;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            z-index: 0;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+    </style>
+	<style>
+        .slideshow-container {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+        .slide {
+            position: relative;
+            text-align: center;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+			border-radius: 10px;
+        }
+
+        
+           
+           
+			border-radius: 10px;
+        }
+
+        .slide:hover .slide-description {
+            opacity: 1;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            z-index: 1000;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+		hr {
+        border: none; /* Remove a borda padrão */
+        height: 1px; /* Define a altura da linha */
+        background-color: #b39240; /* Define a cor da linha, neste caso vermelho */
+		
+		
+}
+
     </style>
 	
     <body>
@@ -210,7 +339,7 @@
 		<br>
 		<br>
 		<br>
-        <a href="index.html"><img src="logo.png" alt="Logo" width="150"></a>
+        <CENTER><a href="index.html"><img src="logo.png" alt="Logo" width="150"></a></CENTER>
         <br>
         <br>
 		
@@ -228,31 +357,36 @@
 <p>
 <a class="yellow-text"><H3>WS Soluções Tecnológicas:</H3></a>
 <P>
+<div class="text-color">
 A WS é uma empresa inovadora dedicada à vanguarda da automação de acesso de portaria por meio da tecnologia RFID (Identificação por Radiofrequência).
 Com uma visão comprometida com a segurança, eficiência e comodidade, estamos transformando a experiência de controle de acesso para condomínios,
 empresas e residências.
+</div>
 <br>
-<div class="container">
-<a class="yellow-text"><center><H3>Nosso Foco</H3></center></a>
+<hr>
+<a class="yellow-text"><H3>Nosso Foco</H3></a>
 <br>
+<div class="text-color">
 Automatização de Acesso com RFID Na WS SOLUÇÕES TECNOLÓGICAS, nossa especialização reside na implementação de sistemas avançados 
 de controle de acesso baseados em RFID. Utilizando a tecnologia de identificação por radiofrequência, proporcionamos soluções 
 personalizadas para otimizar a segurança e a gestão de entrada em portarias. Seja para condomínios residenciais, 
 corporativos ou industriais, nossa abordagem se destaca pela simplicidade, confiabilidade e eficácia.
-
+</div>
 </div>
 <br>
-<div class="container">
-<a class="yellow-text"><center><H3>Compromisso com a Inovação</H3></center></a>
+<hr>
+<a class="yellow-text"><H3>Compromisso com a Inovação</H3></a>
 <br>
+<div class="text-color">
 Estamos na vanguarda da revolução tecnológica, dedicando-nos a incorporar as últimas tendências em automação de acesso em nossas soluções. 
 Ao alavancar o poder do RFID, oferecemos não apenas um método seguro de entrada,mas também uma maneira eficiente e moderna de gerenciar 
 o fluxo de pessoas.
 </div>
 <br>
-<div class="container">
-<a class="yellow-text"><center><H3>Nossa Missão</H3></center></a>
+<hr>
+<a class="yellow-text"><H3>Nossa Missão</H3></a>
 <br>
+<div class="text-color">
 Na WS SOLUÇÕES TECNOLÓGICAS, nossa missão é criar um ambiente mais seguro e eficiente, simplificando a gestão de acesso por meio de soluções inovadoras. 
 Buscamos constantemente superar as expectativas, proporcionando tranquilidade aos nossos clientes por meio de sistemas avançados,
 confiáveis e intuitivos.
@@ -263,16 +397,19 @@ confiáveis e intuitivos.
 <br>
 <br>
 <p>
-<div class="container">
-<a class="yellow-text"><center><H3>Por Que Escolher a WS SOLUÇÕES TECNOLÓGICAS?</H3></center><a>
+<hr>
+<a class="yellow-text"><H3><center>Por Que Escolher a WS SOLUÇÕES TECNOLÓGICAS?</center></H3><a>
 <br>
 <br>
-<b>Experiência Especializada:</b> Contamos com uma equipe de profissionais altamente capacitados e experientes em soluções tecnológicas de acesso.<p>
-<b>Compromisso com a Segurança:</b> Priorizamos a segurança como a pedra angular de nossos serviços, garantindo a proteção total dos ambientes sob nossa supervisão.
-<b><p>Inovação Contínua:</b> Mantemo-nos atualizados com as últimas inovações em automação de acesso para oferecer soluções que atendam às crescentes demandas do mercado.
+<div class="text-color">
+<b><h3>Experiência Especializada:</h3></b> Contamos com uma equipe de profissionais altamente capacitados e experientes em soluções tecnológicas de acesso.<p>
+<b><h3>Compromisso com a Segurança:</h3></b> Priorizamos a segurança como a pedra angular de nossos serviços, garantindo a proteção total dos ambientes sob nossa supervisão.
+<b><p><h3>Inovação Contínua:</h3></b> Mantemo-nos atualizados com as últimas inovações em automação de acesso para oferecer soluções que atendam às crescentes demandas do mercado.
 <br>
 <br>
-<center><b>Junte-se a nós na WS SOLUÇÕES TECNOLÓGICAS, onde a tecnologia encontra a segurança para criar um futuro mais inteligente e protegido.</center>
+<br>
+<P>
+<center><b>Junte-se a nós WS SOLUÇÕES TECNOLÓGICAS e continui transformando e inovando o mundo</center>
 </div>
 <p>
 <br>
@@ -282,6 +419,7 @@ confiáveis e intuitivos.
 <p>
   
     </section>
+	<hr>
     <footer>
         <p><h5>&copy; <a class="yellow-text">2024 WS Solucoes Tecnológias. Todos os Direitos Reservados.</h5></p></a>
     </footer>
