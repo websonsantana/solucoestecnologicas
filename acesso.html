@@ -31,6 +31,18 @@
 		text-align: left;
 		}
 		
+        .content {
+            display: none; /* Inicia escondido */
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Estilos CSS para o título */
+        h2 {
+            cursor: pointer;
+        }
           
     </style>
 </head>
@@ -49,7 +61,7 @@
 <b>
 <h5>
 
-<img src="planejamento.png" alt="LOGOWM" width="40" style= "border-radius: 50%;" >	Planejamento Financeiro;
+<img src="planejamento.png" alt="LOGOWM" width="40" style= "border-radius: 50%;" ><h2 onclick="toggleContent()">Planejamento Financeiro;</h2>	
 
 <p>
 
@@ -87,6 +99,14 @@
             console.log('Senha do administrador:', senhaAdministrador);
             // Aqui você pode armazenar a senha em algum lugar seguro (por exemplo, banco de dados) ou tomar outras ações necessárias.
         });
+	     function toggleContent() {
+            var content = document.getElementById("content");
+            if (content.style.display === "none") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
     </script>
 </body>
 </html>
