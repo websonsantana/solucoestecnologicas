@@ -202,15 +202,7 @@
 	    </section>
 	<script>
 
-        function toggleSaldoVisibility() {
-            var saldoDiv = document.getElementById('saldo');
-            if (saldoDiv.style.display === 'none') {
-                saldoDiv.style.display = 'block';
-            } else {
-                saldoDiv.style.display = 'none';
-            }
-        }
-
+       
         function openNav() {
             document.getElementById('sideNav').style.width = '250px';
         }
@@ -225,113 +217,5 @@
             }
         };
 
-        function gerarPDF() {
-            const { jsPDF } = window.jspdf;
-            const doc = new jsPDF();
-
-            const clienteNome = 'Webson Santana';
-            const entradas = JSON.parse(localStorage.getItem('entradas')) || [];
-            const saidas = JSON.parse(localStorage.getItem('saidas')) || [];
-
-            doc.setFontSize(22);
-            doc.text('Fluxo de Caixa', 20, 20);
-
-            doc.setFontSize(12);
-            doc.text(`Cliente: ${clienteNome}`, 20, 40);
-
-            doc.setFontSize(16);
-            doc.text('Entradas', 20, 60);
-
-            doc.autoTable({
-                startY: 70,
-                head: [['Descrição', 'Valor']],
-                body: entradas.map(item => [item.descricao, item.valor])
-            });
-
-            const lastPos = doc.autoTable.previous.finalY + 10;
-            doc.text('Saídas', 20, lastPos);
-
-            doc.autoTable({
-                startY: lastPos + 10,
-                head: [['Descrição', 'Valor']],
-                body: saidas.map(item => [item.descricao, item.valor])
-            });
-
-            doc.save('fluxo_de_caixa.pdf');
-        }
-
-        function filtrarMovimentacoes() {
-            // Lógica para filtrar as movimentações por mês e ano selecionados
-        }
-
-        function inserirEntrada() {
-            const descricao = document.getElementById('entradaDescricao').value;
-            const valor = document.getElementById('entradaValor').value;
-            if (descricao && valor) {
-                const entrada = { descricao, valor: parseFloat(valor) };
-                const entradas = JSON.parse(localStorage.getItem('entradas')) || [];
-                entradas.push(entrada);
-                localStorage.setItem('entradas', JSON.stringify(entradas));
-                listarEntradas();
-                document.getElementById('entradaDescricao').value = '';
-                document.getElementById('entradaValor').value = '';
-            }
-        }
-
-        function inserirSaida() {
-            const descricao = document.getElementById('saidaDescricao').value;
-            const valor = document.getElementById('saidaValor').value;
-            if (descricao && valor) {
-                const saida = { descricao, valor: parseFloat(valor) };
-                const saidas = JSON.parse(localStorage.getItem('saidas')) || [];
-                saidas.push(saida);
-                localStorage.setItem('saidas', JSON.stringify(saidas));
-                listarSaidas();
-                document.getElementById('saidaDescricao').value = '';
-                document.getElementById('saidaValor').value = '';
-            }
-        }
-
-        function listarEntradas() {
-            const entradas = JSON.parse(localStorage.getItem('entradas')) || [];
-            const listaEntradas = document.getElementById('listaEntradas');
-            listaEntradas.innerHTML = '';
-            entradas.forEach((item, index) => {
-                const li = document.createElement('li');
-                li.innerHTML = `<strong>${item.descricao}</strong><br>R$ ${item.valor.toFixed(2)} 
-                    <button onclick="excluirEntrada(${index})">Excluir</button>`;
-                listaEntradas.appendChild(li);
-            });
-        }
-
-        function excluirEntrada(index) {
-            let entradas = JSON.parse(localStorage.getItem('entradas')) || [];
-            entradas.splice(index, 1); // Remove o item do array
-            localStorage.setItem('entradas', JSON.stringify(entradas)); // Atualiza o localStorage
-            listarEntradas(); // Atualiza a lista exibida
-        }
-
-        function listarSaidas() {
-            const saidas = JSON.parse(localStorage.getItem('saidas')) || [];
-            const listaSaidas = document.getElementById('listaSaidas');
-            listaSaidas.innerHTML = '';
-            saidas.forEach((item, index) => {
-                const li = document.createElement('li');
-                li.innerHTML = `<strong>${item.descricao}</strong><br>R$ ${item.valor.toFixed(2)} 
-                    <button onclick="excluirSaida(${index})">Excluir</button>`;
-                listaSaidas.appendChild(li);
-            });
-        }
-
-        function excluirSaida(index) {
-            let saidas = JSON.parse(localStorage.getItem('saidas')) || [];
-            saidas.splice(index, 1); // Remove o item do array
-            localStorage.setItem('saidas', JSON.stringify(saidas)); // Atualiza o localStorage
-            listarSaidas(); // Atualiza a lista exibida
-        }
-
-        listarEntradas();
-        listarSaidas();
-    </script>
 </body>
 </html>
