@@ -1,4 +1,3 @@
-  
 <!DOCTYPE html>
  
 <html lang="pt-br">
@@ -27,448 +26,306 @@
     <meta property="og:type" content="website"/>	
 	<meta name="theme-color" content="#b39240"/>
     <title>Início | WS Soluções Tecnológicas</title>
-	
-    <link rel="icon" type="image/x-icon" href="icon.png">
+	 <link rel="icon" type="image/x-icon" href="icon.png">
     <!-- Metatag apple-touch-icon para dispositivos iOS -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <!-- Metatag manifest para dispositivos Android -->
     <link rel="manifest" href="/android.json">
-	
-  <div class="menu-container">
-  <button onclick="toggleMenu()"><a class="yellow-text"><h3>☰</h3></button></a>
-  <center><img src="titulo.png" width="60%"></center>
-</div>
-	
 	</header>
-		<br>
-	<style>
-        /* Estilos para ocultar o cursor de seleção */
+      <style>
+	  
         body {
-            -webkit-touch-callout: none; /* iOS Safari */
-            -webkit-user-select: none; /* Safari */
-            -khtml-user-select: none; /* Konqueror HTML */
-            -moz-user-select: none; /* Firefox */
-            -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+            font-family: Arial, helvetica, sans-serif;
+            background-image: linear-gradient(45deg, #fff,#000);
+            color: white;    
         }
-    </style>
-    <style>
-	
-	    .menu-container {
-            display: flex;
-            align-items: center; /* Alinhar itens verticalmente */
-  }
-        .menu-button {
-            background-color: #007bff; /* Cor de fundo do botão */
-            color: #fff; /* Cor do texto do botão */
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            margin-right: 20px; /* Espaçamento à direita do botão */
-  }
-		   
-		    .yellow-text {
-             color: #ffcc66;
-			
-		.container3 {
-		     padding: 40px;
-             margin-left: 800 px;
-             text-align: left;
-                   }
-        .titulo {
-              margin: left
-                }
-	            }
-	    .container1 {
-            max-width: 90%;
-            margin: 0 auto;
-            padding: px;
-            background-color: #666;
-            box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.5);
-	        text-align: left;
-	        border-radius: 10px;
-			
-        }
-	    .container {
-            max-width: 90%;
-            margin: 0 auto;
-            padding: 10px;
-            background-color: #fff;
-            box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.5);
-	    text-align: left;
-	    border-radius: 20px;
-			
-        }
-        body {
-            font-family: Arial, sans-serif; 
-            margin: 50;
-            padding: 50;
-            background-color: #444;
-            color: #fffwe;
+        .container {
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+			background-image: linear-gradient(45deg, #fff,#222);
+            border-radius: 10px;
+            color: white;
         }
         header {
-            background-color: #444;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        header img {
+            width: 50%;
+			
+			
+        }
+        #cliente {
+            display: flex;
+            justify-content: center;
+            background-color: #B39240;
             color: white;
             padding: 10px;
-            text-align: centert;
+            border-radius: 5px;
         }
-        nav {
-            background-color: #444;
-            color: white;
-            width: 200px;
-            height: 90%;
-            position: fixed;
-			text-align: right;
-            top: 0;
-            left: -200px;
-            transition: left 0.5s ease;
-            padding-top: 7px;
-            z-index: 100;
-        }	
-        nav.open {
-            left: 0;
+        #filtro {
+            display: flex;
+            justify-content: space-between;
+            margin: 2px 0;
         }
-         nav a {
-            display: block;
-            color: white;
-            text-decoration: none;
-            padding: 5px;
-            border-bottom: px solid #444;
-            text-align: left;
+        .form-inline {
+            display: flex;
+            flex-direction: column; /* Ajuste para que os inputs fiquem um abaixo do outro */
+            align-items: flex-start; /* Alinhar os inputs à esquerda */
         }
-        nav img {
-            display: block;
-            margin: 0 auto;
-            padding: 0px 0;
-        }
-        section {
-            padding: 0px;
-           
-            text-align: left;
-		}
-        footer {
-            background-color:  #444;
-            color: white;
-            padding: 20px;
-            text-align: center;
+        .form-inline select,
+        .form-inline input {
+            margin-top: 5px; /* Espaçamento entre os inputs */
+            padding: 3px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
         }
         button {
-            background-color: #444; /* Verde grama */
-            color: white; /* Cor do texto branca */
+            background-color: #072739;
+            color: white;
             border: none;
-            padding: 6px 10px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 12px;
-            margin: 6px 3px;
+            padding: 10px 20px;
             cursor: pointer;
-            border-radius: 20px;
-			
-			
-			
+            border-radius: 5px;
+            font-size: 16px;
         }
-
         button:hover {
-            background-color: #000; /* Um tom mais escuro quando o botão é passado o mouse */
+            background-color: #078996;
         }
-        @media screen and (max-width: px) {
-            nav {
-                left: -200px;
-            }
-            
-            nav.open {
-                left: -200px;
-            }
-            
-        }
-		
-		a {
-                text-decoration: none; /* remove o sublinhado */
-                color: black; /* define a cor do texto como preto */
-          }
-		
-        .symbols {
-            position: absolute;
-            top: 10;
-            right: 10;
-        }
-        .title {
-            position: absolute;
-            bottom: 22;
-            width: 100%;
-            text-align: center;
-        }
-		
-		.box {
-            width: 90%;
-            padding: 0px;
-            box-sizing: border-box;
-			border: 2px 
-			solid black;
-            position: relative;
-			
-       }
-	    .box1 {
-            margin: 5px;
-		    width:90%;
-            height: 70px;
-		    border: 3px 
-		    solid black;
-			border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            display: flex;
-			transition: transform 0.3s ease;
-			box-sizing: border-box;
-			}
-			
-			.box1:hover {
-            transform: scale(0.85);
-        }
-		.box1 img {
-            margin-right: 10px;
-        }
-		@media screen and (max-width: 768px) {
-            nav {
-                left: -200px;
-            }
-
-            nav.open {
-                left: 0;
-            }
-
-            
-        button.menu-btn:hover {
-            color: #ccc;
-        }
-		.slideshow-container {
-            max-width: 500px;
-            position: relative;
-            margin: auto;
-        }
-
-        .slide {
-            position: relative;
-            text-align: center;
-        }
-
-        .slide img {
-            width: 90%;
-            height: auto;
-            cursor: pointer;
-        }
-
-        .slide-description {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 90%;
-            background-color: rgba(0, 0, 0, 0.5);
+        h3, h4 {
             color: white;
-            padding: 10px;
-            box-sizing: border-box;
-            opacity: 0;
-            transition: opacity 0.3s ease;
         }
-
-        .slide:hover .slide-description {
-            opacity: 1;
-        }
-
-        .prev, .next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
-            padding: 10px;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            z-index: 0;
-        }
-
-        .prev {
+        #sideNav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
             left: 0;
+            background-color: rgba(0, 0, 0,0.3);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
         }
-
-        .next {
-            right: 0;
+        #sideNav a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 22px;
+            color: #072739;
+            display: block;
+            transition: 0.3s;
         }
-    </style>
-	<style>
-        .slideshow-container {
-            max-width: 90%;
-            position: relative;
-            margin: auto;
+        #sideNav a:hover {
+            color: #fff;
         }
-
-        .slide {
-            position: relative;
-            text-align: center;
+        #sideNav .closeBtn {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
         }
-
-        .slide img {
-            width: 90%;
-            height: auto;
+        #menuBtn {
+            font-size: 30px;
             cursor: pointer;
-			border-radius: 10px;
+            margin: 10px;
         }
-
         
-           
-           
-			border-radius: 10px;
-        }
-
-        .slide:hover .slide-description {
-            opacity: 1;
-        }
-
-        .prev, .next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
+        input {
             padding: 10px;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
             border: none;
+            outline: none;
+            font-size: 15px;
             border-radius: 5px;
-            z-index: 1000;
+            margin-bottom: 5px; /* Espaçamento entre os inputs */
         }
-
-        .prev {
-            left: 0;
+        
+        .movimentacao {
+            margin-bottom: 10px;
         }
-
-        .next {
-            right: 0;
-        }
-		hr {
-        border: none; /* Remove a borda padrão */
-        height: 1px; /* Define a altura da linha */
-        background-color: #b39240; /* Define a cor da linha, neste caso vermelho */
-}
+		
     </style>
-	
-    <body>
-              
-    
-        <nav id="sideNav" onclick="closeMenu()">
-		
-			<button onclick="toggleMenu()">
-	<a class="yellow-text"><h3>X</h3></button></a>
-		<br>
-		<br>
-		<br>
-		<br>
-        <img src="logo.png" alt="Logo" width="150">
-        <br>
-        <br>
-		
-    <a href="index.html" class="yellow-text"> Página Inicial</a>
-    <a href="QUEMSOMOSNOS.HTML">Sobre Nós</a>
-    <a href="SERVICOS.HTML">Serviços</a>
-    <a href="CONTATO.HTML">Contato</a>
-    
-		<br>
-		<br>
-		<br>
-	  <a class="yellow-text"><center><h4>Transformando e Inovando</h4> </center>  </a>
-        </nav>
-		
-		<hr>
-    <section>
-    <div class="slideshow-container">
-        <div class="slide">
-            <a href="CONTATO.HTML">
-                <img src="61.png" alt="Slide 1">
-            </a>
-        </div>
-        <div class="slide">
-            <a href="https://www.instagram.com/wssolucoestecnologicas/">
-                <img src="71.png" alt="Slide 2">
-            </a>
-        </div>
-        <div class="slide">
-         <a href="index.html">
-         <img src="81.png" alt="Slide 3">
-            </a>
-        </div>
-    </div>
-
-</section
-<hr>
-<div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
- padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
- border-radius: 8px; will-change: transform;">
-  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGAw2O58J0&#x2F;vKAWIoDxNwGWsPnB0UUTkg&#x2F;watch?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-  </iframe>
-</div>
-<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGAw2O58J0&#x2F;vKAWIoDxNwGWsPnB0UUTkg&#x2F;watch?utm_content=DAGAw2O58J0&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">,
-	<hr>
-	     <br>
-    <footer>
-        <p><h5>&copy; <a class="yellow-text">2024 WS Solucoes Tecnológias. Todos os Direitos Reservados.</h5></p></a>
-    </footer>
-	    <br>
-	    
-   
-	    
+</head>
+<body>
+<script>
+        // Desabilitar o botão direito do mouse
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    </script>
     <script>
-        function toggleMenu() {
-            var nav = document.getElementById('sideNav');
-            nav.classList.toggle('open');
+        // Verifica se o usuário está autenticado
+        if (localStorage.getItem('isAuthenticated') !== 'true') {
+            window.location.href = 'login.html';
         }
+    </script>
+    <div id="sideNav" class="sidenav">
+        <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()">&times;</a>
+        <center><img src="logws.png" alt="Logo" width="90"></center>
+        <a href="index.html">Inicio</a>
+        <a href="QUEMSOMOSNOS.HTML">Sobre</a>
+        <a href="SERVICOS.HTML">Serviços</a>
+        <a href="CONTATO.HTML">Contato</a>
+    </div>
+    <div id="main" class="container">
+        <span id="menuBtn" onclick="openNav()">&#9776;</span>
+        <header>
+		<img src="fundo.png" alt="Logo Financeiro">
+        </header>
+        <div id="cliente">
+            <div>transformando e inovando </div>
+            </div>
+            
+        <h3 id="fluxo-caixa">Em manutenção</h3>
+		</div>
+        <hr>
+       
+    <footer>
+	
+        <center><h6><p>&copy; 2024 WS Solucoes Tecnológias. Todos os Direitos Reservados.</p></h6></center>
+    </footer>
 
-        function closeMenu() {
-            var nav = document.getElementById('sideNav');
-            if (nav.classList.contains('open')) {
-                nav.classList.remove('open');
+    <!-- Incluindo a biblioteca jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <!-- Incluindo o plugin jspdf.plugin.autotable.min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+
+    <script>
+        document.getElementById('dataHora').textContent = new Date().toLocaleString();
+
+        function toggleSaldoVisibility() {
+            var saldoDiv = document.getElementById('saldo');
+            if (saldoDiv.style.display === 'none') {
+                saldoDiv.style.display = 'block';
+            } else {
+                saldoDiv.style.display = 'none';
             }
         }
-        var slideIndex = 1;
-    showSlide(slideIndex);
-    var slideInterval = setInterval(autoSlide, 4000); // Intervalo de 3 segundos
 
-    function autoSlide() {
-        slideIndex++;
-        showSlide(slideIndex);
-    }
-
-    function changeSlide(n) {
-        clearInterval(slideInterval); // Limpa o intervalo atual
-        slideIndex += n;
-        showSlide(slideIndex);
-        slideInterval = setInterval(autoSlide, 4000); // Inicia um novo intervalo
-    }
-
-    function showSlide(n) {
-        var slides = document.getElementsByClassName("slide");
-
-        if (n > slides.length) {
-            slideIndex = 1;
+        function openNav() {
+            document.getElementById('sideNav').style.width = '250px';
         }
 
-        if (n < 1) {
-            slideIndex = slides.length;
+        function closeNav() {
+            document.getElementById('sideNav').style.width = '0';
         }
 
-        for (var i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
+        window.onclick = function(event) {
+            if (event.target !== document.getElementById('sideNav') && !document.getElementById('sideNav').contains(event.target) && event.target !== document.getElementById('menuBtn')) {
+                closeNav();
+            }
+        };
+
+        function gerarPDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            const clienteNome = 'Webson Santana';
+            const entradas = JSON.parse(localStorage.getItem('entradas')) || [];
+            const saidas = JSON.parse(localStorage.getItem('saidas')) || [];
+
+            doc.setFontSize(22);
+            doc.text('Fluxo de Caixa', 20, 20);
+
+            doc.setFontSize(12);
+            doc.text(`Cliente: ${clienteNome}`, 20, 40);
+
+            doc.setFontSize(16);
+            doc.text('Entradas', 20, 60);
+
+            doc.autoTable({
+                startY: 70,
+                head: [['Descrição', 'Valor']],
+                body: entradas.map(item => [item.descricao, item.valor])
+            });
+
+            const lastPos = doc.autoTable.previous.finalY + 10;
+            doc.text('Saídas', 20, lastPos);
+
+            doc.autoTable({
+                startY: lastPos + 10,
+                head: [['Descrição', 'Valor']],
+                body: saidas.map(item => [item.descricao, item.valor])
+            });
+
+            doc.save('fluxo_de_caixa.pdf');
         }
 
-        slides[slideIndex - 1].style.display = "block";
-    }
+        function filtrarMovimentacoes() {
+            // Lógica para filtrar as movimentações por mês e ano selecionados
+        }
+
+        function inserirEntrada() {
+            const descricao = document.getElementById('entradaDescricao').value;
+            const valor = document.getElementById('entradaValor').value;
+            if (descricao && valor) {
+                const entrada = { descricao, valor: parseFloat(valor) };
+                const entradas = JSON.parse(localStorage.getItem('entradas')) || [];
+                entradas.push(entrada);
+                localStorage.setItem('entradas', JSON.stringify(entradas));
+                listarEntradas();
+                document.getElementById('entradaDescricao').value = '';
+                document.getElementById('entradaValor').value = '';
+            }
+        }
+
+        function inserirSaida() {
+            const descricao = document.getElementById('saidaDescricao').value;
+            const valor = document.getElementById('saidaValor').value;
+            if (descricao && valor) {
+                const saida = { descricao, valor: parseFloat(valor) };
+                const saidas = JSON.parse(localStorage.getItem('saidas')) || [];
+                saidas.push(saida);
+                localStorage.setItem('saidas', JSON.stringify(saidas));
+                listarSaidas();
+                document.getElementById('saidaDescricao').value = '';
+                document.getElementById('saidaValor').value = '';
+            }
+        }
+
+        function listarEntradas() {
+            const entradas = JSON.parse(localStorage.getItem('entradas')) || [];
+            const listaEntradas = document.getElementById('listaEntradas');
+            listaEntradas.innerHTML = '';
+            entradas.forEach((item, index) => {
+                const li = document.createElement('li');
+                li.innerHTML = `<strong>${item.descricao}</strong><br>R$ ${item.valor.toFixed(2)} 
+                    <button onclick="excluirEntrada(${index})">Excluir</button>`;
+                listaEntradas.appendChild(li);
+            });
+        }
+
+        function excluirEntrada(index) {
+            let entradas = JSON.parse(localStorage.getItem('entradas')) || [];
+            entradas.splice(index, 1); // Remove o item do array
+            localStorage.setItem('entradas', JSON.stringify(entradas)); // Atualiza o localStorage
+            listarEntradas(); // Atualiza a lista exibida
+        }
+
+        function listarSaidas() {
+            const saidas = JSON.parse(localStorage.getItem('saidas')) || [];
+            const listaSaidas = document.getElementById('listaSaidas');
+            listaSaidas.innerHTML = '';
+            saidas.forEach((item, index) => {
+                const li = document.createElement('li');
+                li.innerHTML = `<strong>${item.descricao}</strong><br>R$ ${item.valor.toFixed(2)} 
+                    <button onclick="excluirSaida(${index})">Excluir</button>`;
+                listaSaidas.appendChild(li);
+            });
+        }
+
+        function excluirSaida(index) {
+            let saidas = JSON.parse(localStorage.getItem('saidas')) || [];
+            saidas.splice(index, 1); // Remove o item do array
+            localStorage.setItem('saidas', JSON.stringify(saidas)); // Atualiza o localStorage
+            listarSaidas(); // Atualiza a lista exibida
+        }
+
+        listarEntradas();
+        listarSaidas();
     </script>
-    <script>
-        // Bloquear o menu de contexto para evitar que usuários usem botão direito para copiar
-        window.addEventListener('contextmenu', function (e) {
-            e.preventDefault();
-        }, false);
-    </script>
-	
 </body>
 </html>
