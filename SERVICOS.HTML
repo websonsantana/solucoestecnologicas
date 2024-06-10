@@ -1,254 +1,186 @@
-
-  
 <!DOCTYPE html>
- 
-<html lang="pt-br">
+ <html lang="pt-br">
 <link rel="icon" type="image/x-icon" href="icon.png">
 <header>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serviços | WS Soluções Tecnológicas</title>
-	
-	
-	<div class="menu-container">
-  <button onclick="toggleMenu()"><a class="yellow-text"><h3>☰</h3></button></a>
-  <center><img src="titulo.png" width="50%"></center>
-</div>
-
+    <meta charset="UTF-8"/>
+	<meta name="twitter:image" content="https://www.wssolucoestecnologicas.com.br/compartilhar.jpg/>
+	<meta name="twitter:description" content="A WS é uma empresa inovadora dedicada à vanguarda da automação
+	de acesso de portaria por meio da tecnologia RFID (Identificação por Radiofrequência). Com uma visão 
+	comprometida com a segurança, eficiência e comodidade,
+	estamos transformando a experiência de controle de acesso para condomínios, empresas e residências."/>
+	<meta name="twitter:card" content="summary_large_image"/>
+	<meta property="og:image:secure_url" content="https://www.wssolucoestecnologicas.com.br/compartilhar.jpg"/>
+	<meta property="og:image:width" content="2404"/>
+    <meta property="og:image:height" content="1252"/>
+	<meta property="og:image:alt" content="Início | WS Soluções Tecnológicas"/>
+	<meta property="og:site_name" content="Início | WS Soluções Tecnológicas"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta property="og:title" content=" WS Soluções Tecnológicas"/>
+    <meta property="og:description" content="A WS é uma empresa inovadora dedicada à vanguarda da automação
+	de acesso de portaria por meio da tecnologia RFID (Identificação por Radiofrequência). Com uma visão 
+	comprometida com a segurança, eficiência e comodidade,
+	estamos transformando a experiência de controle de acesso para condomínios, empresas e residências."/>
+    <meta property="og:image" content="https://www.wssolucoestecnologicas.com.br/compartilhar.jpg"/>
+    <meta property="og:url" content="https://www.wssolucoestecnologicas.com.br/"/>
+    <meta property="og:type" content="website"/>	
+	<meta name="theme-color" content="#b39240"/>
+    <title>Início | WS Soluções Tecnológicas</title>
+	 <link rel="icon" type="image/x-icon" href="icon.png">
+    <!-- Metatag apple-touch-icon para dispositivos iOS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <!-- Metatag manifest para dispositivos Android -->
+    <link rel="manifest" href="/android.json">
 	</header>
-	<br>
-	<hr>
-<a class="yellow-text"><center><h2>Serviços</h2></center></a>
-<hr>
-
-
-<style>
-hr {
-        border: none; /* Remove a borda padrão */
-        height: 1px; /* Define a altura da linha */
-        background-color: #b39240; /* Define a cor da linha, neste caso vermelho */
-		
-		
-}
-
-  .menu-container {
-            display: flex;
-            align-items: center; /* Alinhar itens verticalmente */
-  }
-        .menu-button {
-            background-color: #007bff; /* Cor de fundo do botão */
-            color: #fff; /* Cor do texto do botão */
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            margin-right: 20px; /* Espaçamento à direita do botão */
-  }
-
-            .imagem-destaque {
+      <style>
+	           .imagem-destaque {
             float: left; /* Para alinhar a imagem à esquerda do texto */
             margin-right: 25px; /* Espaço à direita da imagem */
     }
-    </style>
-	<style>
-	
-	       		
-	    .yellow-text {
-            color: #ffcc66;
-	    }
-	    .container1 {
-            max-width: 100%;
-            margin: 0 auto;
-            padding: px;
-            background-color: #444;
-            box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.5);
-	    text-align: left;
-	    border-radius: 10px;
-			
-        }
-	    .container {
-            max-width: 100%;
-            margin: 0 auto;
-            padding: 10px;
-            background-color: #444;
-            box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.5);
-	    text-align: left;
-	    border-radius: 20px;
-			
-        }
+	  .yellow-text {
+	     color:#B39240;
+              }	 
+	  
         body {
-            font-family: Arial, sans-serif; 
-            margin: 50;
-            padding: 50;
-            background-color: #444;
-            color: #fff;
-			
+            font-family: Arial, helvetica, sans-serif;
+            background-image: linear-gradient(45deg, #fff,#000);
+               
+        }
+        .container {
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+			background-image: linear-gradient(60deg, #111,#fff);
+            border-radius: 10px;
+            color: white;
         }
         header {
-            background-color: #444;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        header img {
+            width: 50%;
+			
+			
+        }
+        #cliente {
+            display: flex;
+            justify-content: center;
+            background-color: #B39240;
             color: white;
             padding: 10px;
-            text-align: left;
-			
+            border-radius: 5px;
         }
-        nav {
-            background-color: #444;
-            color: white;
-            width: 200px;
-            height: 100%;
-            position: fixed;
-			text-align: right;
-            top: 0;
-            left: -200px;
-            transition: left 0.5s ease;
-            padding-top: 7px;
-            z-index: 100;
-        }	
-        nav.open {
-            left: 0;
+        #filtro {
+            display: flex;
+            justify-content: space-between;
+            margin: 2px 0;
         }
-         nav a {
-            display: block;
-            color: white;
-            text-decoration: none;
-            padding: 5px;
-            border-bottom: px solid #444;
-            text-align: left;
+        .form-inline {
+            display: flex;
+            flex-direction: column; /* Ajuste para que os inputs fiquem um abaixo do outro */
+            align-items: flex-start; /* Alinhar os inputs à esquerda */
         }
-        nav img {
-            display: block;
-            margin: 0 auto;
-            padding: 0px 0;
-        }
-        section {
-            padding: px;
-            margin-left: 800 px;
-            text-align: left;
-		}
-        footer {
-            background-color:  #444;
-            color: white;
-            padding: 20px;
-            text-align: center;
+        .form-inline select,
+        .form-inline input {
+            margin-top: 5px; /* Espaçamento entre os inputs */
+            padding: 3px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
         }
         button {
-            background-color: #444; /* Verde grama */
-            color: white; /* Cor do texto branca */
+            background-color: #072739;
+            color: white;
             border: none;
             padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 12px;
-            margin: 6px 3px;
             cursor: pointer;
-            border-radius: 60px;
-			
+            border-radius: 5px;
+            font-size: 16px;
         }
-
         button:hover {
-            background-color: #000; /* Um tom mais escuro quando o botão é passado o mouse */
+            background-color: #078996;
         }
-        @media screen and (max-width: px) {
-            nav {
-                left: -200px;
-            }
-            
-            nav.open {
-                left: -200px;
-            }
-            
+        h3, h4 {
+            color: white;
         }
-		
-		a {
-                text-decoration: none; /* remove o sublinhado */
-                color: black; /* define a cor do texto como preto */
-          }
-		
-        .symbols {
+        #sideNav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0,0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+        }
+        #sideNav a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 22px;
+            color: #B39240;
+            display: block;
+            transition: 0.3s;
+        }
+        #sideNav a:hover {
+            color: #fff;
+        }
+        #sideNav .closeBtn {
             position: absolute;
-            top: 10;
-            right: 10;
+            top: 10px;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
         }
-        .title {
-            position: absolute;
-            bottom: 22;
-            width: 100%;
-            text-align: center;
+        #menuBtn {
+            font-size: 30px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        
+        input {
+            padding: 10px;
+            border: none;
+            outline: none;
+            font-size: 15px;
+            border-radius: 5px;
+            margin-bottom: 5px; /* Espaçamento entre os inputs */
+        }
+        
+        .movimentacao {
+            margin-bottom: 10px;
         }
 		
-		.box {
-            width: 100%;
-            padding: 0px;
-            box-sizing: border-box;
-			border: 2px 
-			solid black;
-            position: relative;
-			
-       }
-	    .box1 {
-            margin: 5px;
-		    width:100%;
-            height: 70px;
-		    border: 3px 
-		    solid black;
-			border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            display: flex;
-			transition: transform 0.3s ease;
-			box-sizing: border-box;
-			}
-			
-			.box1:hover {
-            transform: scale(0.85);
-        }
-		.box1 img {
-            margin-right: 10px;
-        }
-		@media screen and (max-width: 768px) {
-            nav {
-                left: -200px;
-            }
-
-            nav.open {
-                left: 0;
-            }
-
-            
-        button.menu-btn:hover {
-            color: #ccc;
-        }
     </style>
-	
-    <body>
-              
-    
-        <nav id="sideNav" onclick="closeMenu()">
-		
-			<button onclick="toggleMenu()">
-	<a class="yellow-text"><h3>X</h3></button></a>
-		<br>
-		<br>
-		<br>
-		<br>
-        <a href="index.html"><img src="logo.png" alt="Logo" width="150"></a>
-        <br>
-        <br>
-		
-    <a href="index.html" > Página Inicial</a>
-    <a href="QUEMSOMOSNOS.HTML">Sobre Nós</a>
-    <a href="SERVICOS.HTML"class="yellow-text">Serviços</a>
-    <a href="CONTATO.HTML">Contato</a>
-    		<br>
-		<br>
-		<br>
-	  <a class="yellow-text"><center><h4>Transformando e Inovando</h4> </center>  </a>
-        </nav>
-    <section>
-
-<head>
-<p>
-<div class="container">
+</head>
+<body>
+<script>
+        // Desabilitar o botão direito do mouse
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    </script>
+   
+    <div id="sideNav" class="sidenav">
+        <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()">&times;</a>
+        <center><img src="logws.png" alt="Logo" width="90"></center>
+        <a href="index.html">Inicio</a>
+        <a href="QUEMSOMOSNOS.HTML">Sobre</a>
+        <a href="SERVICOS.HTML">Serviços</a>
+        <a href="CONTATO.HTML">Contato</a>
+    </div>
+    <div id="main" class="container">
+        <span id="menuBtn" onclick="openNav()">&#9776;</span>
+        <header>
+		<img src="fundo.png" alt="Logo Financeiro">
+        </header>
+        <div id="cliente">
+            <div>Serviços</div>
+            </div>
+          <section>
+	     <div class="container">
 <div class= "imagem-destaque">
 <img src="https://th.bing.com/th/id/OIG2.CwB8NnZXbuYJWuI70N_p?pid=ImgGn" alt="Seu Ícone" width="80" height="80"style="border-radius: 50%;">
 </div>
@@ -258,18 +190,18 @@ hr {
 Implementação de sistemas avançados de controle de acesso com tecnologia RFID.
 Desenvolvimento de soluções personalizadas para atender às necessidades específicas de condomínios, empresas e residências.
 </div>
-<br>
+
 <div class="container">
 <div class= "imagem-destaque">
 <img src="https://th.bing.com/th/id/OIG4.CQALiIiaShxLbGaWw5wL?pid=ImgGn" alt="Seu Ícone" width="80" height="80"style="border-radius: 50%;">
 </div>
-<P>
+
 <a class="yellow-text"><H3>Instalação de Dispositivos RFID:</H3></a>
 <P>
 Instalação e configuração de dispositivos de identificação por radiofrequência (RFID) para portões, portas e catracas.
 Integração de leitores RFID com sistemas existentes de segurança.
 </div>
-<br>
+
 <div class="container">
 <div class= "imagem-destaque">
 <img src="https://th.bing.com/th/id/OIG4.mimtjpTYfd9ytux6zOrg?w=1024&h=1024&rs=1&pid=ImgDetMain"  alt="Seu Ícone" width="80" height="80"style="border-radius: 50%;">
@@ -280,7 +212,7 @@ Integração de leitores RFID com sistemas existentes de segurança.
 Criação de software personalizado para gerenciamento centralizado de controle de acesso.
 Desenvolvimento de aplicativos móveis para facilitar a gestão remota de acesso.
 </div>
-<br>
+
 <div class="container">
 <div class= "imagem-destaque">
 <img src="https://th.bing.com/th/id/OIG1.LtR_3HFPM23gFtjmK2bX?pid=ImgGn"  alt="Seu Ícone" width="80" height="80"style="border-radius: 50%;">
@@ -293,7 +225,7 @@ Implementação de medidas adicionais de segurança, como câmeras de vigilânci
 Treinamento para usuários e administradores do sistema.
 Suporte técnico contínuo para garantir a operação adequada dos sistemas implantados.
 </div>
-<br>
+
 <div class="container">
 <div class= "imagem-destaque">
 <img src="https://th.bing.com/th/id/OIG3.rMoG4.iZ2yHa1RiXxew6?w=1024&h=1024&rs=1&pid=ImgDetMain"  alt="Seu Ícone" width="80" height="80"style="border-radius: 50%;">
@@ -304,7 +236,7 @@ Suporte técnico contínuo para garantir a operação adequada dos sistemas impl
 Integração do sistema de controle de acesso com sistemas de gestão predial.
 Conectividade com sistemas de automação residencial e corporativa.
 </div>
-<br>
+
 <div class="container">
 <div class= "imagem-destaque">
 <img src="https://th.bing.com/th/id/OIG1.Nx6VQP83ssKJdD.HFNRv?w=1024&h=1024&rs=1&pid=ImgDetMain"  alt="Seu Ícone" width="80" height="80"style="border-radius: 50%;">
@@ -315,7 +247,7 @@ Conectividade com sistemas de automação residencial e corporativa.
 Programas de manutenção preventiva para garantir o funcionamento eficiente a longo prazo.
 Serviços de manutenção corretiva para resolver problemas imprevistos rapidamente.
 </div>
-<br>
+
 <div class="container">
 <div class= "imagem-destaque">
 <img src="https://th.bing.com/th/id/OIG3.LHic0La0HOlARspm734d?pid=ImgGn"  alt="Seu Ícone" width="80" height="80"style="border-radius: 50%;"> 
@@ -326,7 +258,7 @@ Serviços de manutenção corretiva para resolver problemas imprevistos rapidame
 Fornecimento de atualizações de software e hardware para manter os sistemas alinhados com as últimas tecnologias.
 Avaliação e implementação de inovações tecnológicas no campo da automação de acesso.
 </div>
-<br>
+
 <div class="container">
 <div class= "imagem-destaque">
 <img src="https://th.bing.com/th/id/OIG3._HwIOqAXcAXMfVbov9an?w=1024&h=1024&rs=1&pid=ImgDetMain"  alt="Seu Ícone" width="80" height="80"style="border-radius: 50%;">
@@ -339,29 +271,41 @@ Notificações em tempo real e relatórios automatizados.
 Esta lista é apenas um ponto de partida e pode ser adaptada conforme necessário, dependendo do foco específico da empresa e das demandas do mercado. 
 </div>
 <br>
-</head>
-    </section>
+	    </section>
+
+		</div>
+        <hr>
+
+
+       
     <footer>
-        <p><h5>&copy; <a class="yellow-text">2024 WS Solucoes Tecnológias. Todos os Direitos Reservados.</h5></p></a>
+	
+        <center><h6><p>&copy; 2024 WS Solucoes Tecnológias. Todos os Direitos Reservados.</p></h6></center>
     </footer>
-	    <br>
-	    
-   
-	    
-    <script>
-        function toggleMenu() {
-            var nav = document.getElementById('sideNav');
-            nav.classList.toggle('open');
+
+    <!-- Incluindo a biblioteca jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <!-- Incluindo o plugin jspdf.plugin.autotable.min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+
+    
+     
+	<script>
+
+       
+        function openNav() {
+            document.getElementById('sideNav').style.width = '250px';
         }
 
-        function closeMenu() {
-            var nav = document.getElementById('sideNav');
-            if (nav.classList.contains('open')) {
-                nav.classList.remove('open');
-            }
+        function closeNav() {
+            document.getElementById('sideNav').style.width = '0';
         }
-        
-    </script>
-	
+
+        window.onclick = function(event) {
+            if (event.target !== document.getElementById('sideNav') && !document.getElementById('sideNav').contains(event.target) && event.target !== document.getElementById('menuBtn')) {
+                closeNav();
+            }
+        };
+	</script>
 </body>
 </html>
