@@ -1,265 +1,222 @@
 <!DOCTYPE html>
- <html lang="pt-br">
+<html lang="pt-br">
+<head>
 <link rel="icon" type="image/x-icon" href="icon.png">
 <header>
     <meta charset="UTF-8"/>
-	<meta name="twitter:image" content="https://www.wssolucoestecnologicas.com.br/compartilhar.jpg/>
-	<meta name="twitter:description" content="A WS é uma empresa inovadora dedicada à vanguarda da automação
-	de acesso de portaria por meio da tecnologia RFID (Identificação por Radiofrequência). Com uma visão 
-	comprometida com a segurança, eficiência e comodidade,
-	estamos transformando a experiência de controle de acesso para condomínios, empresas e residências."/>
-	<meta name="twitter:card" content="summary_large_image"/>
-	<meta property="og:image:secure_url" content="https://www.wssolucoestecnologicas.com.br/compartilhar.jpg"/>
-	<meta property="og:image:width" content="2404"/>
+    <meta name="twitter:image" content="https://www.wssolucoestecnologicas.com.br/compartilhar.jpg"/>
+    <meta name="twitter:description" content="A WS é uma empresa inovadora dedicada à vanguarda da automação de acesso de portaria por meio da tecnologia RFID (Identificação por Radiofrequência). Com uma visão comprometida com a segurança, eficiência e comodidade, estamos transformando a experiência de controle de acesso para condomínios, empresas e residências."/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta property="og:image:secure_url" content="https://www.wssolucoestecnologicas.com.br/compartilhar.jpg"/>
+    <meta property="og:image:width" content="2404"/>
     <meta property="og:image:height" content="1252"/>
-	<meta property="og:image:alt" content="Início | WS Soluções Tecnológicas"/>
-	<meta property="og:site_name" content="Início | WS Soluções Tecnológicas"/>
+    <meta property="og:image:alt" content="Início | WS Soluções Tecnológicas"/>
+    <meta property="og:site_name" content="Início | WS Soluções Tecnológicas"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta property="og:title" content=" WS Soluções Tecnológicas"/>
-    <meta property="og:description" content="A WS é uma empresa inovadora dedicada à vanguarda da automação
-	de acesso de portaria por meio da tecnologia RFID (Identificação por Radiofrequência). Com uma visão 
-	comprometida com a segurança, eficiência e comodidade,
-	estamos transformando a experiência de controle de acesso para condomínios, empresas e residências."/>
+    <meta property="og:description" content="A WS é uma empresa inovadora dedicada à vanguarda da automação de acesso de portaria por meio da tecnologia RFID (Identificação por Radiofrequência). Com uma visão comprometida com a segurança, eficiência e comodidade, estamos transformando a experiência de controle de acesso para condomínios, empresas e residências."/>
     <meta property="og:image" content="https://www.wssolucoestecnologicas.com.br/compartilhar.jpg"/>
     <meta property="og:url" content="https://www.wssolucoestecnologicas.com.br/"/>
-    <meta property="og:type" content="website"/>	
-	<meta name="theme-color" content="#b39240"/>
+    <meta property="og:type" content="website"/> 
+    <meta name="theme-color" content="#b39240"/>
     <title>Início | WS Soluções Tecnológicas</title>
-	 <link rel="icon" type="image/x-icon" href="icon.png">
+    <link rel="icon" type="image/x-icon" href="icon.png">
     <!-- Metatag apple-touch-icon para dispositivos iOS -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <!-- Metatag manifest para dispositivos Android -->
     <link rel="manifest" href="/android.json">
-	</header>
-      <style>
-	  
-	  .yellow-text {
-	     color:#B39240;
-              }	 
-	  
-        body {
-            font-family: Arial, helvetica, sans-serif;
-            background-image: linear-gradient(45deg, #fff,#000);
-               
-        }
-        .container {
-            max-width: 700px;
-            margin: 20px auto;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
-			background-image: linear-gradient(60deg, #111,#fff);
-            border-radius: 10px;
-            color: white;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        header img {
-            width: 50%;
-			
-			
-        }
-        #cliente {
-            display: flex;
-            justify-content: center;
-            background-color: #B39240;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        #filtro {
-            display: flex;
-            justify-content: space-between;
-            margin: 2px 0;
-        }
-        .form-inline {
-            display: flex;
-            flex-direction: column; /* Ajuste para que os inputs fiquem um abaixo do outro */
-            align-items: flex-start; /* Alinhar os inputs à esquerda */
-        }
-        .form-inline select,
-        .form-inline input {
-            margin-top: 5px; /* Espaçamento entre os inputs */
-            padding: 3px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-        button {
-            background-color: #072739;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        button:hover {
-            background-color: #078996;
-        }
-        h3, h4 {
-            color: white;
-        }
-        #sideNav {
-            height: 100%;
-            width: 0;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: rgba(0, 0, 0,0.9);
-            overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 60px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
-        }
-        #sideNav a {
-            padding: 10px 15px;
-            text-decoration: none;
-            font-size: 22px;
-            color: #B39240;
-            display: block;
-            transition: 0.3s;
-        }
-        #sideNav a:hover {
-            color: #fff;
-        }
-        #sideNav .closeBtn {
-            position: absolute;
-            top: 10px;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
-        }
-        #menuBtn {
-            font-size: 30px;
-            cursor: pointer;
-            margin: 10px;
-        }
-        
-        input {
-            padding: 10px;
-            border: none;
-            outline: none;
-            font-size: 15px;
-            border-radius: 5px;
-            margin-bottom: 5px; /* Espaçamento entre os inputs */
-        }
-        
-        .movimentacao {
-            margin-bottom: 10px;
-        }
-		
-    </style>
+</header>
+<style>
+    .yellow-text {
+        color: #B39240;
+    }
+    body {
+        font-family: Arial, helvetica, sans-serif;
+        background-image: linear-gradient(45deg, #fff, #000);
+    }
+    .container {
+        max-width: 700px;
+        margin: 20px auto;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+        background-image: linear-gradient(60deg, #111, #fff);
+        border-radius: 10px;
+        color: white;
+    }
+    header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    header img {
+        width: 50%;
+    }
+    #cliente {
+        display: flex;
+        justify-content: center;
+        background-color: #B39240;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .form-inline {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .form-inline select,
+    .form-inline input {
+        margin-top: 5px;
+        padding: 3px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    button {
+        background-color: #072739;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    button:hover {
+        background-color: #078996;
+    }
+    h3, h4 {
+        color: white;
+    }
+    #sideNav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    }
+    #sideNav a {
+        padding: 10px 15px;
+        text-decoration: none;
+        font-size: 22px;
+        color: #B39240;
+        display: block;
+        transition: 0.3s;
+    }
+    #sideNav a:hover {
+        color: #fff;
+    }
+    #sideNav .closeBtn {
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+    #menuBtn {
+        font-size: 30px;
+        cursor: pointer;
+        margin: 10px;
+    }
+    input {
+        padding: 10px;
+        border: none;
+        outline: none;
+        font-size: 15px;
+        border-radius: 5px;
+        margin-bottom: 5px;
+    }
+    .movimentacao {
+        margin-bottom: 10px;
+    }
+</style>
 </head>
 <body>
 <script>
-        // Desabilitar o botão direito do mouse
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-        });
-    </script>
-   
-    <div id="sideNav" class="sidenav">
-        <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()">&times;</a>
-        <center><img src="logws.png" alt="Logo" width="90"></center>
-        <a href="index.html">Inicio</a>
-        <a href="QUEMSOMOSNOS.HTML">Sobre</a>
-        <a href="SERVICOS.HTML">Serviços</a>
-        <a href="CONTATO.HTML">Contato</a>
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+</script>
+<div id="sideNav" class="sidenav">
+    <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()">&times;</a>
+    <center><img src="logws.png" alt="Logo" width="90"></center>
+    <a href="index.html">Inicio</a>
+    <a href="QUEMSOMOSNOS.HTML">Sobre</a>
+    <a href="SERVICOS.HTML">Serviços</a>
+    <a href="CONTATO.HTML">Contato</a>
+</div>
+<div id="main" class="container">
+    <span id="menuBtn" onclick="openNav()">&#9776;</span>
+    <header>
+        <img src="fundo.png" alt="Logo Financeiro">
+    </header>
+    <div id="cliente">
+        <div>Sobre</div>
     </div>
-    <div id="main" class="container">
-        <span id="menuBtn" onclick="openNav()">&#9776;</span>
-        <header>
-		<img src="fundo.png" alt="Logo Financeiro">
-        </header>
-        <div id="cliente">
-            <div>Sobre</div>
+    <section>
+        <div class="container">
+            <h3><a class="yellow-text">WS Soluções Tecnológicas</a></h3>
+            <p>
+                A WS é uma empresa inovadora dedicada à vanguarda da automação de acesso de portaria por meio da tecnologia RFID (Identificação por Radiofrequência). Com uma visão comprometida com a segurança, eficiência e comodidade, estamos transformando a experiência de controle de acesso para condomínios, empresas e residências.
+            </p>
+        </div>
+        <div class="container">
+            <h3><a class="yellow-text">Nosso Foco</a></h3>
+            <p>
+                Automatização de Acesso com RFID. Na WS SOLUÇÕES TECNOLÓGICAS, nossa especialização reside na implementação de sistemas avançados de controle de acesso baseados em RFID. Utilizando a tecnologia de identificação por radiofrequência, proporcionamos soluções personalizadas para otimizar a segurança e a gestão de entrada em portarias. Seja para condomínios residenciais, corporativos ou industriais, nossa abordagem se destaca pela simplicidade, confiabilidade e eficácia.
+            </p>
+        </div>
+        <div class="container">
+            <h3><a class="yellow-text">Compromisso com a Inovação</a></h3>
+            <p>
+                Estamos na vanguarda da revolução tecnológica, dedicando-nos a incorporar as últimas tendências em automação de acesso em nossas soluções. Ao alavancar o poder do RFID, oferecemos não apenas um método seguro de entrada, mas também uma maneira eficiente e moderna de gerenciar o fluxo de pessoas.
+            </p>
+        </div>
+        <div class="container">
+            <h3><a class="yellow-text">Nossa Missão</a></h3>
+            <p>
+                Na WS SOLUÇÕES TECNOLÓGICAS, nossa missão é criar um ambiente mais seguro e eficiente, simplificando a gestão de acesso por meio de soluções inovadoras. Buscamos constantemente superar as expectativas, proporcionando tranquilidade aos nossos clientes por meio de sistemas avançados, confiáveis e intuitivos.
+            </p>
+        </div>
+        <div class="container">
+            <h3><center>Por Que Escolher a WS SOLUÇÕES TECNOLÓGICAS?</center></h3>
+            <div class="container">
+                <h3>🤓<a class="yellow-text">Experiência Especializada</a></h3>
+                <p>Contamos com uma equipe de profissionais altamente capacitados e experientes em soluções tecnológicas de acesso.</p>
             </div>
-          <section>
-	       <div class="container">
-<H3><a class="yellow-text">WS Soluções Tecnológicas</a></H3>
-
-<P>
-
-A WS é uma empresa inovadora dedicada à vanguarda da automação de acesso de portaria por meio da tecnologia RFID (Identificação por Radiofrequência).
-Com uma visão comprometida com a segurança, eficiência e comodidade, estamos transformando a experiência de controle de acesso para condomínios,
-empresas e residências.
+            <div class="container">
+                <h3>🔐<a class="yellow-text">Compromisso com a Segurança</a></h3>
+                <p>Priorizamos a segurança como a pedra angular de nossos serviços, garantindo a proteção total dos ambientes sob nossa supervisão.</p>
+            </div>
+            <div class="container">
+                <h3>💡<a class="yellow-text">Inovação Contínua</a></h3>
+                <p>Mantemo-nos atualizados com as últimas inovações em automação de acesso para oferecer soluções que atendam às crescentes demandas do mercado.</p>
+            </div>
+            <center><b>Junte-se a nós na WS SOLUÇÕES TECNOLÓGICAS, transformando e inovando.</b></center>
+        </div>
+    </section>
 </div>
-
-<div class="container">
-<H3><a class="yellow-text">Nosso Foco</a></H3>
-
-Automatização de Acesso com RFID Na WS SOLUÇÕES TECNOLÓGICAS, nossa especialização reside na implementação de sistemas avançados 
-de controle de acesso baseados em RFID. Utilizando a tecnologia de identificação por radiofrequência, proporcionamos soluções 
-personalizadas para otimizar a segurança e a gestão de entrada em portarias. Seja para condomínios residenciais, 
-corporativos ou industriais, nossa abordagem se destaca pela simplicidade, confiabilidade e eficácia.
-</div>
-<div class="container">
-<H3><a class="yellow-text">Compromisso com a Inovação</a></H3>
-<br>
-
-Estamos na vanguarda da revolução tecnológica, dedicando-nos a incorporar as últimas tendências em automação de acesso em nossas soluções. 
-Ao alavancar o poder do RFID, oferecemos não apenas um método seguro de entrada,mas também uma maneira eficiente e moderna de gerenciar 
-o fluxo de pessoas.
-</div>
-<div class="container">
-<H3><a class="yellow-text">Nossa Missão</a></H3>
-
-Na WS SOLUÇÕES TECNOLÓGICAS, nossa missão é criar um ambiente mais seguro e eficiente, simplificando a gestão de acesso por meio de soluções inovadoras. 
-Buscamos constantemente superar as expectativas, proporcionando tranquilidade aos nossos clientes por meio de sistemas avançados,
-confiáveis e intuitivos.
-</div>
-</div>
-<div class="container">
-<H3><center>Por Que Escolher a WS SOLUÇÕES TECNOLÓGICAS?</center></H3></a>
-
-<div class="container">
-<b><h3>🤓<a class="yellow-text">Experiência Especializada</a></h3></b> Contamos com uma equipe de profissionais altamente capacitados e experientes em soluções tecnológicas de acesso.<p>
-</div>
-<div class="container">
-<b><h3>🔐<a class="yellow-text">Compromisso com a Segurança</a></h3></b> Priorizamos a segurança como a pedra angular de nossos serviços, garantindo a proteção total dos ambientes sob nossa supervisão.
-</div>
-<div class="container">
-<b><p><h3>💡<a class="yellow-text">Inovação Contínua</a></h3></b> Mantemo-nos atualizados com as últimas inovações em automação de acesso para oferecer soluções que atendam às crescentes demandas do mercado.
-</div>
-<center><b>Junte-se a nós WS SOLUÇÕES TECNOLÓGICAS transformando e inovando</center>
-</div>
-	    </section>
-
-		</div>
-        <hr>
-
-
-       
-    <footer>
-	
-        <center><h6><p>&copy; 2024 WS Solucoes Tecnológias. Todos os Direitos Reservados.</p></h6></center>
-    </footer>
-
-    <!-- Incluindo a biblioteca jsPDF -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-    <!-- Incluindo o plugin jspdf.plugin.autotable.min.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
-
-    
-     
-	<script>
-
-       
-        function openNav() {
-            document.getElementById('sideNav').style.width = '250px';
+<hr>
+<footer>
+    <center><h6>&copy; 2024 WS Soluções Tecnológicas. Todos os Direitos Reservados.</h6></center>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+<script>
+    function openNav() {
+        document.getElementById('sideNav').style.width = '250px';
+    }
+    function closeNav() {
+        document.getElementById('sideNav').style.width = '0';
+    }
+    window.onclick = function(event) {
+        if (event.target !== document.getElementById('sideNav') && !document.getElementById('sideNav').contains(event.target) && event.target !== document.getElementById('menuBtn')) {
+            closeNav();
         }
-
-        function closeNav() {
-            document.getElementById('sideNav').style.width = '0';
-        }
-
-        window.onclick = function(event) {
-            if (event.target !== document.getElementById('sideNav') && !document.getElementById('sideNav').contains(event.target) && event.target !== document.getElementById('menuBtn')) {
-                closeNav();
-            }
-        };
-	</script>
+    };
+</script>
 </body>
 </html>
