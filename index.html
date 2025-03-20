@@ -116,6 +116,13 @@
         footer p {
             margin: 0;
         }
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border-radius: 12px;
+        }
     </style>
 </head>
 
@@ -136,7 +143,11 @@
         </header>
 
         <section>
-            <iframe src="https://www.canva.com/design/DAGAw2O58J0/vKAWIoDxNwGWsPnB0UUTkg/watch?embed" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+            <div class="project">   
+                    <video id="meuVideo" autoplay muted loop>
+                        <source src="home.mp4" type="video/mp4">
+                    </video>
+                </div>
         </section>
     </div>
 
@@ -156,6 +167,24 @@
         // Impedir o menu de contexto (botão direito do mouse)
         document.addEventListener('contextmenu', function (e) {
             e.preventDefault();
+        });
+    </script>
+    <script>
+        // Seleciona o elemento de vídeo pelo seu ID
+        const meuVideo = document.getElementById("meuVideo");
+    
+        // Define um tempo de 25 segundos para o autoplay
+        const tempoAutoplay = 25; 
+    
+        // Define um evento que será executado quando o vídeo estiver pronto para ser reproduzido
+        meuVideo.addEventListener("loadeddata", () => {
+            // Inicia a reprodução do vídeo
+            meuVideo.play();
+    
+            // Define um tempo limite para pausar o vídeo após 25 segundos
+            setTimeout(() => {
+                meuVideo.pause();
+            }, tempoAutoplay * 1000); // Multiplica por 1000 para converter segundos em milissegundos
         });
     </script>
 </body>
