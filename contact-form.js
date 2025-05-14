@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // 2. Crie um serviço de e-mail (Gmail, Outlook, etc)
         // 3. Crie um template de e-mail com as variáveis: from_name, from_email, from_phone, service, message
         // 4. Substitua abaixo sua chave pública do EmailJS
-        emailjs.init("YOUR_PUBLIC_KEY"); // Substitua por sua chave pública do EmailJS
+        emailjs.init("TXZjDIzJ1-mYgJFD5"); // Substitua por sua chave pública do EmailJS
     };
     
     // Configura o formulário de contato
