@@ -1,6 +1,6 @@
 // Configurações do formulário de contato
 const CONFIG = {
-    EMAIL: 'webson.jose@gmail.com',
+    EMAIL: 'contato.webson@gmail.com',
     WHATSAPP: '5581981521109',
     SUBJECT: 'Novo contato do site WS Soluções Tecnológicas'
 };
@@ -37,7 +37,7 @@ function sendToWhatsApp(formData) {
     const servico = encodeURIComponent(formData.servico || 'Não especificado');
     const mensagem = encodeURIComponent(formData.mensagem);
     
-    const text = `*Novo contato do site*%0A%0A*Nome:* ${nome}%0A*E-mail:* ${email}%0A*Telefone:* ${telefone}%0A*Serviço:* ${servico}%0A*Mensagem:* ${mensagem}`;
+    const text = `*Olá tenho interesse quero mais informações*%0A%0A*Nome:* ${nome}%0A*E-mail:* ${email}%0A*Telefone:* ${telefone}%0A*Serviço:* ${servico}%0A*Mensagem:* ${mensagem}`;
     
     const whatsappURL = `https://api.whatsapp.com/send?phone=${CONFIG.WHATSAPP}&text=${text}`;
     
