@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
      <meta property="og:title" content="WS Soluções Tecnológicas" /> <meta property="og:image" content="https://websonsantana.com.br/compartilhar.jpg" />
     <meta property="og:image:secure_url" content="https://websonsantana.com.br/compartilhar.jpg" />
     <meta property="og:image:width" content="2404" />
@@ -11,18 +11,20 @@
     <meta property="og:url" content="https://websonsantana.com.br/" />
     <meta property="og:type" content="website" />
     <meta name="theme-color" content="#b39240" />
-    <link rel="manifest" href="android.json">
+    <meta name="description" content="WS Soluções Tecnológicas - Desenvolvimento de sites, sistemas personalizados e estratégias digitais para alavancar seu negócio." />
+    <link rel="manifest" href="manifest.json">
     <link rel="icon" type="image/x-icon" href="icon.png">
     <!-- Metatag apple-touch-icon para dispositivos iOS -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <!-- Metatag manifest para dispositivos Android -->
-    <link rel="manifest" href="android.json">
+    <!-- Metatag para dispositivos iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>WS Soluções Tecnológicas | Criação de Sites, Sistemas e Marketing Digital</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .tech-gradient {
-            background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #3949ab 100%);
+            background: linear-gradient(135deg, #8a6d2f 0%, #b39240 50%, #d4af37 100%);
         }
         .service-card:hover {
             transform: translateY(-10px);
@@ -33,40 +35,50 @@
         }
         @keyframes glow {
             from {
-                box-shadow: 0 0 5px rgba(66, 165, 245, 0.5);
+                box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
             }
             to {
-                box-shadow: 0 0 20px rgba(66, 165, 245, 0.8);
+                box-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
             }
         }
     </style>
 </head>
 <body class="font-sans bg-gray-50">
     <!-- Header -->
-    <header class="tech-gradient text-white">
+    <header class="bg-gray-800 text-white">
         <div class="container mx-auto px-6 py-12">
             <nav class="flex items-center justify-between">
                 <div class="text-2xl font-bold flex items-center">
-                    <i class="fas fa-laptop-code mr-2 text-blue-300"></i>
-                    <span class="text-blue-300">Webson</span> Santana
+                    <i class="fas fa-laptop-code mr-2 text-amber-300"></i>
+                    <span class="text-amber-300">WS</span> Soluções Tecnológicas
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#servicos" class="hover:text-blue-200 transition">Serviços</a>
-                    <a href="#tecnologias" class="hover:text-blue-200 transition">Tecnologias</a>
-                    <a href="#sobre" class="hover:text-blue-200 transition">Sobre</a>
-                    <a href="#contato" class="hover:text-blue-200 transition">Contato</a>
+                    <a href="#servicos" class="hover:text-amber-300 transition">Serviços</a>
+                    <a href="#tecnologias" class="hover:text-amber-300 transition">Tecnologias</a>
+                    <a href="#sobre" class="hover:text-amber-300 transition">Sobre</a>
+                    <a href="#contato" class="hover:text-amber-300 transition">Contato</a>
                 </div>
-                <button class="md:hidden">
+                <button id="mobile-menu-button" class="md:hidden focus:outline-none">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </nav>
             
+            <!-- Menu Mobile -->
+            <div id="mobile-menu" class="hidden bg-gray-700 rounded-lg mt-4 py-4 px-6 md:hidden">
+                <div class="flex flex-col space-y-4">
+                    <a href="#servicos" class="text-white hover:text-amber-200 transition">Serviços</a>
+                    <a href="#tecnologias" class="text-white hover:text-amber-200 transition">Tecnologias</a>
+                    <a href="#sobre" class="text-white hover:text-amber-200 transition">Sobre</a>
+                    <a href="#contato" class="text-white hover:text-amber-200 transition">Contato</a>
+                </div>
+            </div>
+            
             <div class="mt-20 text-center">
                 <h1 class="text-4xl md:text-6xl font-bold mb-6">Soluções Digitais Sob Medida</h1>
-                <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
+                <p class="text-xl md:text-2xl text-amber-100 max-w-3xl mx-auto">
                     Desenvolvimento de sites, sistemas personalizados e estratégias digitais para alavancar seu negócio
                 </p>
-                <a href="#servicos" class="mt-10 inline-block bg-white text-blue-800 px-8 py-4 rounded-full font-bold hover:bg-blue-100 transition duration-300 glow-effect">
+                <a href="#servicos" class="mt-10 inline-block bg-white text-amber-800 px-8 py-4 rounded-full font-bold hover:bg-amber-100 transition duration-300 glow-effect">
                     Nossos Serviços <i class="fas fa-arrow-down ml-2"></i>
                 </a>
             </div>
@@ -78,17 +90,17 @@
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nossos Serviços Tecnológicos</h2>
-                <div class="w-24 h-1 bg-blue-500 mx-auto"></div>
+                <div class="w-24 h-1 bg-amber-500 mx-auto"></div>
                 <p class="mt-6 text-gray-600 max-w-2xl mx-auto">
                     Soluções completas para sua presença digital e automação de processos
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
                 <!-- Serviço 1 -->
                 <div class="service-card bg-gray-50 p-8 rounded-xl border border-gray-200 transition duration-300">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-globe text-blue-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-globe text-amber-600 text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">Criação de Sites</h3>
                     <p class="text-gray-600 mb-4">
@@ -96,15 +108,15 @@
                     </p>
                     <ul class="space-y-2 text-gray-600">
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <i class="fas fa-check-circle text-amber-500 mt-1 mr-2"></i>
                             <span>Sites institucionais e landing pages</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <i class="fas fa-check-circle text-amber-500 mt-1 mr-2"></i>
                             <span>Lojas virtuais (e-commerce)</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <i class="fas fa-check-circle text-amber-500 mt-1 mr-2"></i>
                             <span>Blogs e portais de conteúdo</span>
                         </li>
                     </ul>
@@ -112,8 +124,8 @@
 
                 <!-- Serviço 2 -->
                 <div class="service-card bg-gray-50 p-8 rounded-xl border border-gray-200 transition duration-300">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-qrcode text-blue-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-qrcode text-amber-600 text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">Menu Digital</h3>
                     <p class="text-gray-600 mb-4">
@@ -121,15 +133,15 @@
                     </p>
                     <ul class="space-y-2 text-gray-600">
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <i class="fas fa-check-circle text-amber-500 mt-1 mr-2"></i>
                             <span>Design personalizado</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <i class="fas fa-check-circle text-amber-500 mt-1 mr-2"></i>
                             <span>Atualização remota de itens e preços</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <i class="fas fa-check-circle text-amber-500 mt-1 mr-2"></i>
                             <span>Integração com sistema de pedidos</span>
                         </li>
                     </ul>
@@ -137,8 +149,8 @@
 
                 <!-- Serviço 3 -->
                 <div class="service-card bg-gray-50 p-8 rounded-xl border border-gray-200 transition duration-300">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-hashtag text-blue-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-hashtag text-amber-600 text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">Gestão de Mídias Sociais</h3>
                     <p class="text-gray-600 mb-4">
@@ -146,15 +158,15 @@
                     </p>
                     <ul class="space-y-2 text-gray-600">
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <i class="fas fa-check-circle text-amber-500 mt-1 mr-2"></i>
                             <span>Criação de conteúdo estratégico</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <i class="fas fa-check-circle text-amber-500 mt-1 mr-2"></i>
                             <span>Gestão de comunidades</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <i class="fas fa-check-circle text-amber-500 mt-1 mr-2"></i>
                             <span>Anúncios patrocinados</span>
                         </li>
                     </ul>
@@ -162,8 +174,8 @@
 
                 <!-- Serviço 4 -->
                 <div class="service-card bg-gray-50 p-8 rounded-xl border border-gray-200 transition duration-300">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-file-excel text-blue-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-file-excel text-amber-600 text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">Sistemas em VBA</h3>
                     <p class="text-gray-600 mb-4">
@@ -171,15 +183,15 @@
                     </p>
                     <ul class="space-y-2 text-gray-600">
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <i class="fas fa-check-circle text-amber-500 mt-1 mr-2"></i>
                             <span>Automatização de planilhas</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <i class="fas fa-check-circle text-amber-500 mt-1 mr-2"></i>
                             <span>Sistemas de controle e gestão</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <i class="fas fa-check-circle text-amber-500 mt-1 mr-2"></i>
                             <span>Integração com outros sistemas</span>
                         </li>
                     </ul>
@@ -187,8 +199,8 @@
 
                 <!-- Serviço 5 -->
                 <div class="service-card bg-gray-50 p-8 rounded-xl border border-gray-200 transition duration-300">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-search-dollar text-blue-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-search-dollar text-amber-600 text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">SEO e Marketing Digital</h3>
                     <p class="text-gray-600 mb-4">
@@ -196,15 +208,15 @@
                     </p>
                     <ul class="space-y-2 text-gray-600">
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <i class="fas fa-check-circle text-amber-500 mt-1 mr-2"></i>
                             <span>Otimização técnica e de conteúdo</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <i class="fas fa-check-circle text-amber-500 mt-1 mr-2"></i>
                             <span>Análise de palavras-chave</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <i class="fas fa-check-circle text-amber-500 mt-1 mr-2"></i>
                             <span>Relatórios de desempenho</span>
                         </li>
                     </ul>
@@ -212,8 +224,8 @@
 
                 <!-- Serviço 6 -->
                 <div class="service-card bg-gray-50 p-8 rounded-xl border border-gray-200 transition duration-300">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-mobile-alt text-blue-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-amber-600 text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">Aplicativos Web</h3>
                     <p class="text-gray-600 mb-4">
@@ -221,15 +233,15 @@
                     </p>
                     <ul class="space-y-2 text-gray-600">
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <i class="fas fa-check-circle text-amber-500 mt-1 mr-2"></i>
                             <span>Sistemas de gestão</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <i class="fas fa-check-circle text-amber-500 mt-1 mr-2"></i>
                             <span>Dashboards analíticos</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <i class="fas fa-check-circle text-amber-500 mt-1 mr-2"></i>
                             <span>CRMs personalizados</span>
                         </li>
                     </ul>
@@ -243,19 +255,19 @@
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Tecnologias que Utilizamos</h2>
-                <div class="w-24 h-1 bg-blue-500 mx-auto"></div>
+                <div class="w-24 h-1 bg-amber-500 mx-auto"></div>
                 <p class="mt-6 text-gray-600 max-w-2xl mx-auto">
                     Utilizamos as melhores ferramentas e tecnologias do mercado para entregar soluções de qualidade
                 </p>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-8">
                 <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
                     <i class="fab fa-html5 text-5xl text-orange-500 mb-3"></i>
                     <span class="font-medium text-gray-700">HTML5</span>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
-                    <i class="fab fa-css3-alt text-5xl text-blue-500 mb-3"></i>
+                    <i class="fab fa-css3-alt text-5xl text-amber-500 mb-3"></i>
                     <span class="font-medium text-gray-700">CSS3</span>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
@@ -263,7 +275,7 @@
                     <span class="font-medium text-gray-700">JavaScript</span>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
-                    <i class="fab fa-react text-5xl text-blue-400 mb-3"></i>
+                    <i class="fab fa-react text-5xl text-amber-400 mb-3"></i>
                     <span class="font-medium text-gray-700">React</span>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
@@ -271,15 +283,15 @@
                     <span class="font-medium text-gray-700">Node.js</span>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
-                    <i class="fas fa-database text-5xl text-blue-600 mb-3"></i>
+                    <i class="fas fa-database text-5xl text-amber-600 mb-3"></i>
                     <span class="font-medium text-gray-700">SQL</span>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
-                    <i class="fab fa-microsoft text-5xl text-blue-800 mb-3"></i>
+                    <i class="fab fa-microsoft text-5xl text-amber-800 mb-3"></i>
                     <span class="font-medium text-gray-700">VBA</span>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
-                    <i class="fab fa-wordpress text-5xl text-blue-700 mb-3"></i>
+                    <i class="fab fa-wordpress text-5xl text-amber-700 mb-3"></i>
                     <span class="font-medium text-gray-700">WordPress</span>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
@@ -287,7 +299,7 @@
                     <span class="font-medium text-gray-700">Google Ads</span>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
-                    <i class="fab fa-facebook text-5xl text-blue-600 mb-3"></i>
+                    <i class="fab fa-facebook text-5xl text-amber-600 mb-3"></i>
                     <span class="font-medium text-gray-700">Facebook Ads</span>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
@@ -315,12 +327,12 @@
                         Nossa missão é transformar ideias em realidade digital, oferecendo desde websites até sistemas complexos, sempre com foco nos resultados para nossos clientes.
                     </p>
                     <div class="flex space-x-4">
-                        <div class="bg-blue-100 px-4 py-2 rounded-lg">
-                            <span class="text-blue-800 font-bold block text-2xl">+50</span>
+                        <div class="bg-amber-100 px-4 py-2 rounded-lg">
+                            <span class="text-amber-800 font-bold block text-2xl">+50</span>
                             <span class="text-gray-600">Projetos entregues</span>
                         </div>
-                        <div class="bg-blue-100 px-4 py-2 rounded-lg">
-                            <span class="text-blue-800 font-bold block text-2xl">3+</span>
+                        <div class="bg-amber-100 px-4 py-2 rounded-lg">
+                            <span class="text-amber-800 font-bold block text-2xl">3+</span>
                             <span class="text-gray-600">Anos de experiência</span>
                         </div>
                     </div>
@@ -337,33 +349,33 @@
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nosso Processo de Trabalho</h2>
-                <div class="w-24 h-1 bg-blue-500 mx-auto"></div>
+                <div class="w-24 h-1 bg-amber-500 mx-auto"></div>
             </div>
 
-            <div class="grid md:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
                 <div class="text-center">
-                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 text-blue-600 text-2xl font-bold">1</div>
+                    <div class="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6 text-amber-600 text-2xl font-bold">1</div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">Briefing</h3>
                     <p class="text-gray-600">
                         Entendemos suas necessidades e objetivos para criar a solução ideal
                     </p>
                 </div>
                 <div class="text-center">
-                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 text-blue-600 text-2xl font-bold">2</div>
+                    <div class="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6 text-amber-600 text-2xl font-bold">2</div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">Proposta</h3>
                     <p class="text-gray-600">
                         Apresentamos cronograma, escopo e orçamento do projeto
                     </p>
                 </div>
                 <div class="text-center">
-                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 text-blue-600 text-2xl font-bold">3</div>
+                    <div class="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6 text-amber-600 text-2xl font-bold">3</div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">Desenvolvimento</h3>
                     <p class="text-gray-600">
                         Criamos a solução com atualizações periódicas sobre o progresso
                     </p>
                 </div>
                 <div class="text-center">
-                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 text-blue-600 text-2xl font-bold">4</div>
+                    <div class="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6 text-amber-600 text-2xl font-bold">4</div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">Entrega</h3>
                     <p class="text-gray-600">
                         Implementação, treinamento e suporte pós-entrega
@@ -377,10 +389,10 @@
     <section class="tech-gradient text-white py-20">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Pronto para transformar seu negócio digitalmente?</h2>
-            <p class="text-xl text-blue-100 max-w-2xl mx-auto mb-10">
+            <p class="text-xl text-amber-100 max-w-2xl mx-auto mb-10">
                 Solicite um orçamento sem compromisso e descubra como podemos ajudar seu negócio a crescer no mundo digital.
             </p>
-            <a href="#contato" class="inline-block bg-white text-blue-800 px-8 py-4 rounded-full font-bold hover:bg-blue-100 transition duration-300">
+            <a href="#contato" class="inline-block bg-white text-amber-800 px-8 py-4 rounded-full font-bold hover:bg-amber-100 transition duration-300 glow-effect">
                 Solicitar Orçamento <i class="fas fa-paper-plane ml-2"></i>
             </a>
         </div>
@@ -391,30 +403,30 @@
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Entre em Contato</h2>
-                <div class="w-24 h-1 bg-blue-500 mx-auto"></div>
+                <div class="w-24 h-1 bg-amber-500 mx-auto"></div>
                 <p class="mt-6 text-gray-600 max-w-2xl mx-auto">
                     Preencha o formulário abaixo ou utilize nossos outros canais de atendimento
                 </p>
             </div>
 
-            <div class="flex flex-col lg:flex-row">
+            <div class="flex flex-col lg:flex-row space-y-8 lg:space-y-0">
                 <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
                     <form class="space-y-6">
                         <div>
                             <label for="nome" class="block text-gray-700 font-medium mb-2">Nome Completo</label>
-                            <input type="text" id="nome" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <input type="text" id="nome" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
                         </div>
                         <div>
                             <label for="email" class="block text-gray-700 font-medium mb-2">E-mail</label>
-                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
                         </div>
                         <div>
                             <label for="telefone" class="block text-gray-700 font-medium mb-2">Telefone</label>
-                            <input type="tel" id="telefone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <input type="tel" id="telefone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
                         </div>
                         <div>
                             <label for="servico" class="block text-gray-700 font-medium mb-2">Serviço de Interesse</label>
-                            <select id="servico" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <select id="servico" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
                                 <option value="">Selecione um serviço</option>
                                 <option value="sites">Criação de Sites</option>
                                 <option value="menu">Menu Digital</option>
@@ -426,9 +438,9 @@
                         </div>
                         <div>
                             <label for="mensagem" class="block text-gray-700 font-medium mb-2">Mensagem</label>
-                            <textarea id="mensagem" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                            <textarea id="mensagem" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
                         </div>
-                        <button type="submit" class="w-full bg-blue-600 text-white px-6 py-4 rounded-lg font-bold hover:bg-blue-700 transition duration-300">
+                        <button type="submit" class="w-full bg-amber-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-amber-700 transition duration-300">
                             Enviar Mensagem <i class="fas fa-paper-plane ml-2"></i>
                         </button>
                     </form>
@@ -439,8 +451,8 @@
                         
                         <div class="space-y-6">
                             <div class="flex items-start">
-                                <div class="bg-blue-100 p-3 rounded-full mr-4">
-                                    <i class="fas fa-phone text-blue-600"></i>
+                                <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone text-amber-600"></i>
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-gray-800 mb-1">Telefone/WhatsApp</h4>
@@ -449,8 +461,8 @@
                             </div>
                             
                             <div class="flex items-start">
-                                <div class="bg-blue-100 p-3 rounded-full mr-4">
-                                    <i class="fas fa-envelope text-blue-600"></i>
+                                <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-amber-600"></i>
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-gray-800 mb-1">E-mail</h4>
@@ -459,8 +471,8 @@
                             </div>
                             
                             <div class="flex items-start">
-                                <div class="bg-blue-100 p-3 rounded-full mr-4">
-                                    <i class="fas fa-clock text-blue-600"></i>
+                                <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-clock text-amber-600"></i>
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-gray-800 mb-1">Horário de Atendimento</h4>
@@ -476,10 +488,10 @@
                                 Consultorias e reuniões realizadas via videoconferência para maior comodidade.
                             </p>
                             <div class="flex space-x-4">
-                                <a href="https://wa.me/5581987930949" class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-200 transition">
+                                <a href="https://wa.me/5581987930949" class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 hover:bg-amber-200 transition">
                                     <i class="fab fa-whatsapp"></i>
                                 </a>
-                                <a href="mailto:webson.jose@gmail.com" class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-200 transition">
+                                <a href="mailto:webson.jose@gmail.com" class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 hover:bg-amber-200 transition">
                                     <i class="fas fa-envelope"></i>
                                 </a>
                             </div>
@@ -496,7 +508,7 @@
             <div class="grid md:grid-cols-4 gap-10">
                 <div>
                     <h3 class="text-xl font-bold mb-4 flex items-center">
-                        <i class="fas fa-laptop-code mr-2 text-blue-300"></i>
+                        <i class="fas fa-laptop-code mr-2 text-amber-300"></i>
                         <span>WS Soluções Tecnológicas</span>
                     </h3>
                     <p class="text-gray-400">
@@ -542,6 +554,19 @@
     </footer>
 
     <script>
+        // Registrar o Service Worker para PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => {
+                        console.log('Service Worker registrado com sucesso:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.log('Falha ao registrar o Service Worker:', error);
+                    });
+            });
+        }
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -553,8 +578,39 @@
             });
         });
 
-        // Mobile menu toggle functionality would go here
-        // This is a basic implementation without the actual toggle logic
+        // Mobile menu toggle functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                
+                // Change icon based on menu state
+                const icon = mobileMenuButton.querySelector('i');
+                if (icon) {
+                    if (mobileMenu.classList.contains('hidden')) {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    } else {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    }
+                }
+            });
+            
+            // Close mobile menu when clicking on links
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+            });
+        }
     </script>
 </body>
 </html>

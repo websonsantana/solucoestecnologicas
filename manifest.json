@@ -1,0 +1,23 @@
+{
+  "name": "WS Soluções Tecnológicas",
+  "short_name": "WS Soluções",
+  "description": "Desenvolvimento de sites, sistemas personalizados e estratégias digitais para alavancar seu negócio",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#b39240",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
