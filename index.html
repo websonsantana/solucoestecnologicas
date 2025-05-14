@@ -21,6 +21,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>WS Soluções Tecnológicas | Criação de Sites, Sistemas e Marketing Digital</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .tech-gradient {
@@ -319,7 +320,7 @@
         <div class="container mx-auto px-6">
             <div class="flex flex-col lg:flex-row items-center">
                 <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Sobre a WS </h2>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Sobre a WS Soluções Tecnológicas</h2>
                     <p class="text-gray-600 mb-6">
                         Somos uma empresa especializada em desenvolvimento de soluções digitais personalizadas, combinando tecnologia, criatividade e estratégia para impulsionar negócios no ambiente digital.
                     </p>
@@ -411,7 +412,7 @@
 
             <div class="flex flex-col lg:flex-row space-y-8 lg:space-y-0">
                 <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
-                    <form class="space-y-6">
+                    <form id="contact-form" class="space-y-6">
                         <div>
                             <label for="nome" class="block text-gray-700 font-medium mb-2">Nome Completo</label>
                             <input type="text" id="nome" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
@@ -422,7 +423,7 @@
                         </div>
                         <div>
                             <label for="telefone" class="block text-gray-700 font-medium mb-2">Telefone</label>
-                            <input type="tel" id="telefone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            <input type="tel" id="telefone" placeholder="(00) 00000-0000" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
                         </div>
                         <div>
                             <label for="servico" class="block text-gray-700 font-medium mb-2">Serviço de Interesse</label>
@@ -439,6 +440,19 @@
                         <div>
                             <label for="mensagem" class="block text-gray-700 font-medium mb-2">Mensagem</label>
                             <textarea id="mensagem" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+                        </div>
+                        <div class="mb-4">
+                            <p class="block text-gray-700 font-medium mb-2">Como prefere receber o retorno?</p>
+                            <div class="flex space-x-4">
+                                <label class="flex items-center">
+                                    <input type="radio" name="send-method" value="email" checked class="mr-2 text-amber-600 focus:ring-amber-500">
+                                    <span>E-mail</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="send-method" value="whatsapp" class="mr-2 text-amber-600 focus:ring-amber-500">
+                                    <span>WhatsApp</span>
+                                </label>
+                            </div>
                         </div>
                         <button type="submit" class="w-full bg-amber-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-amber-700 transition duration-300">
                             Enviar Mensagem <i class="fas fa-paper-plane ml-2"></i>
@@ -508,8 +522,8 @@
             <div class="grid md:grid-cols-4 gap-10">
                 <div>
                     <h3 class="text-xl font-bold mb-4 flex items-center">
-                        <img src="/icon.png" alt="Logo" class="w-8 h-8 mr-2 inline-block">
-                        <span>Soluções Tecnológicas</span>
+                        <i class="fas fa-laptop-code mr-2 text-amber-300"></i>
+                        <span>WS Soluções Tecnológicas</span>
                     </h3>
                     <p class="text-gray-400">
                         Especialistas em desenvolvimento web, sistemas personalizados e estratégias digitais para alavancar seu negócio.
@@ -612,5 +626,6 @@
             });
         }
     </script>
+    <script src="contact-form.js"></script>
 </body>
 </html>
